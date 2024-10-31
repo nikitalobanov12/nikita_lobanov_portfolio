@@ -35,7 +35,7 @@ const ProjectCard: React.FC<Project> = ({
       {/* Description Container */}
       <div
         className="
-          bg-white md:bg-transparent
+          bg-neutral-200 md:bg-transparent
           p-4 md:p-6
           text-center md:text-white
           md:absolute inset-0
@@ -47,7 +47,7 @@ const ProjectCard: React.FC<Project> = ({
         "
       >
         <div>
-          <h3 className="text-xl font-bold mb-2">{title}</h3>
+          <h3 className="text-xl font-bold text-black md:text-white mb-2">{title}</h3>
           <div className="mb-4 text-neutral-600 md:text-neutral-300">
             {Array.isArray(description)
               ? description.map((line, index) => (
@@ -60,7 +60,7 @@ const ProjectCard: React.FC<Project> = ({
               href={websiteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:bg-neutral-800 font-bold bg-neutral-200 text-neutral-800 transition-colors hover:text-white py-2 px-4 rounded-md"
+              className=" font-bold bg-neutral-800 text-white md:bg-neutral-200 md:text-black  transition-colors hover:text-white hover:bg-neutral-800 py-2 px-4 rounded-md"
             >
               Visit Website
             </a>
@@ -69,7 +69,7 @@ const ProjectCard: React.FC<Project> = ({
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-400 hover:bg-green-800 text-neutral-800 font-bold transition-colors py-2 px-4 rounded-md"
+                className="bg-green-400 hover:bg-neutral-800 text-neutral-800 hover:text-green-400 font-bold transition-colors py-2 px-4 rounded-md"
               >
                 GitHub
               </a>

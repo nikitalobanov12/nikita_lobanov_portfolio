@@ -30,7 +30,7 @@ export default function Icons(){
             <li key={link.href}>
           <Link
             href={link.href}
-            className="inline-block transform hover:scale-110 transition-all duration-300 hover:text-neutral-500"
+            className="inline-block transform hover:scale-110 transition-all duration-300 hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
           >

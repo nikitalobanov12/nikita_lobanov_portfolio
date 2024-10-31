@@ -8,7 +8,7 @@ export default function About(){
       icon: <Image src="/nextjs.svg" alt="Next.js Logo" width={32} height={32} />,
     },
     tailwind: {
-      name: "Tailwind CSS",
+      name: "Tailwind",
       icon: <Image src="/tailwind.svg" alt="Tailwind CSS Logo" width={32} height={32} />,
     },
     prisma: {
