@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
+import Link from 'next/link';
 
 export default function About(){
   const stack = {
@@ -34,7 +35,9 @@ export default function About(){
       <section>
         <h2 className="text-2xl font-semibold leading-relaxed text-neutral-100">About</h2>
         <p className="md:text-lg mt-4">
-          Currently in the Full-Stack Web Development Program at BCIT
+          Currently in the <Link href={"https://www.bcit.ca/programs/full-stack-web-development-diploma-full-time-7540dipma/"} className='text-blue-400 hover:text-blue-600 transition-all'>Full-Stack Web Development Program</Link> at BCIT
+          <br /><br />
+          Completed the <Link href={"https://www.coursera.org/professional-certificates/meta-front-end-developer"} className='text-blue-400 hover:text-blue-600 transition-all'> Meta Front-End Developer Certificate </Link>
           <br /><br />
           Working as a freelance Front-End Developer
           <br /><br />
