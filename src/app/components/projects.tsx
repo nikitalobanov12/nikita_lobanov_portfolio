@@ -95,9 +95,7 @@ const projectsData = [
     title: 'Affistash',
     imageUrl: '/Affistash.png', 
     description: [
-        'Helped build this Web-App',
-        'Uses NextJS, Google Authentication, Prisma Database',
-        'Taught me how to collaborate with others using Git'
+        'Enhanced my understanding of full-stack application development, collaborative coding practices, and modern web technologies.'
       ],
     websiteUrl: 'https://affistash.com/',
   },
@@ -105,8 +103,7 @@ const projectsData = [
     title: 'H2L Design Studio',
     imageUrl: '/h2l.png',
     description: [
-        'Website for interior design studio, built and designed by me',
-        'Uses Vanilla JS, Html, CSS, Node.js, firebase'
+        'Strengthened skills in designing aesthetically pleasing interfaces, developing full-stack applications, and optimizing website performance for enhanced user experience.'
 
     ],
     websiteUrl: 'https://h2ldesignstudio.com/',
@@ -115,9 +112,9 @@ const projectsData = [
     title: 'Image Filter',
     imageUrl: "/filter-image.png",
     description: [
-      'Takes a users image, applies a filter and displays it.',
-      'Built with NextJS, Cloudinary for storing images, & npm Sharp library for Image Processing',
-      'Learned how to work with a database, API routing in nextjs, and creating my own backend processes'
+     'Gained hands-on experience with API routing in Next.js to create robust back-end services.',
+     'Improved my understanding of database integration for efficient data handling.',
+     'Strengthened my ability to design and implement custom back-end processes for handling image transformations.',
     ],
     websiteUrl: 'https://filter-image-two.vercel.app/',
     githubUrl: 'https://github.com/nikitalobanov12/filter-image'
