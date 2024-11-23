@@ -28,7 +28,7 @@ const ProjectCard: React.FC<Project> = ({
           src={imageUrl}
           alt={title}
           fill
-          className="md:rounded-lg rounded-t-lg w-full h-full object-cover md:group-hover:opacity-5 transition-opacity duration-300"
+          className="md:rounded-lg rounded-t-lg w-full h-full object-cover object-top md:group-hover:opacity-5 transition-opacity duration-300"
         />
       </div>
 
@@ -110,7 +110,17 @@ const projectsData = [
 
     ],
     websiteUrl: 'https://h2ldesignstudio.com/',
-    githubUrl: 'https://github.com/nikitalobanov12/H2L',
+  },
+  {
+    title: 'Image Filter',
+    imageUrl: "/filter-image.png",
+    description: [
+      'Takes a users image, applies a filter and displays it.',
+      'Built with NextJS, Cloudinary for storing images, & npm Sharp library for Image Processing',
+      'Learned how to work with a database, API routing in nextjs, and creating my own backend processes'
+    ],
+    websiteUrl: 'https://filter-image-two.vercel.app/',
+    githubUrl: 'https://github.com/nikitalobanov12/filter-image'
   },
 ];
 
