@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
+import Link from "next/link";
 export function ExperienceSection() {
   const experiences = [
     {
@@ -17,7 +17,7 @@ export function ExperienceSection() {
     },
     {
       title: "Full-stack Developer",
-      company: "Astash",
+      company: "Affistash",
       period: "March 2023 - October 2023",
       location: "Remote",
       description: [
@@ -25,7 +25,8 @@ export function ExperienceSection() {
         "Engineered RESTful APIs and integrated real-time data synchronization with Firebase Authentication and Cloud Functions.",
         "Iteratively enhanced application performance and UX by analyzing user feedback from Indie Hackers and Twitter."
       ],
-      tags: ["Node", "TypeScript", "NoSQL"]
+      tags: ["Node", "TypeScript", "NoSQL"],
+	  link: "https://affistash.com"
     },
     {
       title: "Cook",
@@ -56,7 +57,16 @@ export function ExperienceSection() {
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div>
-                    <CardTitle>{exp.title} at {exp.company}</CardTitle>
+				  <CardTitle>
+                      {exp.title} at {' '}
+                      {exp.link ? (
+                        <Link href={exp.link} className="underline inline-flex items-center gap-1 underline-offset-2 hover:text-gray-700 transition-all" target="_blank">
+                          {exp.company}
+                        </Link>
+                      ) : (
+                        exp.company
+                      )}
+                    </CardTitle>
                     <CardDescription>{exp.period} • {exp.location}</CardDescription>
                   </div>
                   {exp.tags && (
