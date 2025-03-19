@@ -1,12 +1,17 @@
-// layout.tsx
-import React from "react"; // Import React for StrictMode
+import React from "react"; 
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "./components/footer";
+import { Inter as FontSans } from "next/font/google"
+import { cn} from "@/lib/utils"
+
+const fontSans = FontSans( {
+	subsets: ["latin"],
+	variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
-  title: "Nikita Lobanov",
-  description: "Full-Stack Web Developer",
+  title: "Nikita Lobanov | Full-Stack Web Developer",
+  description: "Full-Stack Web Developer portfolio showcasing projects and experience",
 };
 
 export default function RootLayout({
@@ -15,13 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <React.StrictMode>
-        <body className="font-mono antialiased bg-neutral-900 text-gray-300 container max-w-3xl mx-auto px-8">
-          {children}
-          <Footer />
-        </body>
-      </React.StrictMode>
+    <html lang="en" suppressHydrationWarning>
+		<body className={cn(
+			"min-h-screen bg-background font-sans antialiased",
+			fontSans.variable
+		)}>
+			<div className="relative flex min-h-screen flex-col">
+				{children}
+			</div>
+			
+		</body>
     </html>
   );
 }

@@ -1,20 +1,26 @@
-import About from "./components/about";
-import Experience from "./components/experience";
-import Hero from "./components/hero";
-import Projects from "./components/projects";
-
-
-
-
+import { HeroSection } from "@/components/sections/hero";
+import { ExperienceSection } from "@/components/sections/experience";
+import { SkillsSection } from "@/components/sections/skills";
+import { ProjectsSection } from "@/components/sections/projects";
+import { EducationSection } from "@/components/sections/education";
+import { ContactSection } from "@/components/sections/contact";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { AboutSection } from "@/components/sections/about";
 export default function Home() {
-
-  return(
-    <main>
-      <Hero/>
-      <About/>
-      <Projects/>
-      <Experience/>
-    </main>
-    
-  )
+  return (
+    <>
+      <Navbar />
+      <main className="container mx-auto px-4 py-10 space-y-24">
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <EducationSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </>
+  );
 }
