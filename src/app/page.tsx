@@ -11,14 +11,22 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="container mx-auto px-4 py-10 space-y-24">
+      <main className="container mx-auto px-4 py-32 space-y-32">
         <HeroSection />
         <AboutSection />
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
-        <EducationSection />
-        <ContactSection />
+		<section >
+          <div className="grid lg:grid-cols-2 lg:gap-8 gap-16">
+            <div className="h-full flex flex-col">
+              <EducationSection />
+            </div>
+            <div className="h-full flex flex-col">
+              <ContactSection />
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
