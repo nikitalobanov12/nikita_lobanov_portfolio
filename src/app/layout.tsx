@@ -28,7 +28,7 @@ export default function RootLayout({
 			<div className="relative flex min-h-screen flex-col">
 				{children}
 			</div>
-			
+			<div id="mobile-menu-root"></div>
 		</body>
     </html>
   );
