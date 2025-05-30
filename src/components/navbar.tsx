@@ -19,7 +19,6 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Navigation */}
         <div className="md:hidden ml-auto">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -63,7 +62,6 @@ export function Navbar() {
           </DropdownMenu>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium flex-1 justify-end">
           <Link href="#about" className="transition-all hover:text-gray-600">About</Link>
           <Link href="#experience" className="transition-all hover:text-gray-600">Experience</Link>
