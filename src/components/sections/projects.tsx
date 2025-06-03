@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import { MotionDiv, MotionSection } from '@/components/motion-components';
 
 export function ProjectsSection() {
 	const projects = [
@@ -33,79 +34,111 @@ export function ProjectsSection() {
 			live: 'https://affistash.com',
 		},
 	];
-
 	return (
-		<section
+		<MotionSection
 			id='projects'
 			className='py-16'
+			initial={{ opacity: 0, y: 50 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.6 }}
+			viewport={{ once: true }}
 		>
 			<div className='space-y-6'>
-				{' '}
-				<div className='space-y-2'>
+				<MotionDiv
+					className='space-y-2'
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.1 }}
+					viewport={{ once: true }}
+				>
 					<h2 className='text-3xl font-bold tracking-tight'>Projects</h2>
 					<p className='text-muted-foreground'>A showcase of my recent development work featuring full-stack applications with modern technologies</p>
-				</div>
+				</MotionDiv>
 				<div className='grid gap-6 md:grid-cols-2'>
 					{projects.map((project, index) => (
-						<Card
+						<MotionDiv
 							key={index}
-							className='flex flex-col h-full'
+							initial={{ opacity: 0, y: 50 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, delay: index * 0.1 }}
+							viewport={{ once: true }}
+							whileHover={{ y: -5, transition: { duration: 0.2 } }}
 						>
-							<CardHeader>
-								<CardTitle>{project.title}</CardTitle>
-								<CardDescription>{project.date}</CardDescription>
-							</CardHeader>
-							<CardContent className='flex-1'>
-								<p className='mb-2'>{project.description}</p>
-								<p className='text-sm text-muted-foreground'>{project.details}</p>
-								<div className='flex flex-wrap gap-2 mt-4'>
-									{project.tags.map(tag => (
-										<Badge
-											key={tag}
-											variant='secondary'
+							<Card className='flex flex-col h-full hover:shadow-lg transition-shadow duration-300'>
+								<CardHeader>
+									<CardTitle>{project.title}</CardTitle>
+									<CardDescription>{project.date}</CardDescription>
+								</CardHeader>
+								<CardContent className='flex-1'>
+									<p className='mb-2'>{project.description}</p>
+									<p className='text-sm text-muted-foreground'>{project.details}</p>
+									<div className='flex flex-wrap gap-2 mt-4'>
+										{project.tags.map((tag, tagIndex) => (
+											<MotionDiv
+												key={tag}
+												initial={{ opacity: 0, scale: 0.8 }}
+												whileInView={{ opacity: 1, scale: 1 }}
+												transition={{ duration: 0.3, delay: index * 0.1 + tagIndex * 0.05 }}
+												viewport={{ once: true }}
+											>
+												<Badge
+													variant='secondary'
+													className='hover:bg-primary hover:text-primary-foreground transition-colors duration-200'
+												>
+													{tag}
+												</Badge>
+											</MotionDiv>
+										))}
+									</div>
+								</CardContent>
+								<CardFooter className='flex gap-2'>
+									{project.github && (
+										<MotionDiv
+											whileHover={{ scale: 1.05 }}
+											whileTap={{ scale: 0.95 }}
 										>
-											{tag}
-										</Badge>
-									))}
-								</div>
-							</CardContent>{' '}
-							<CardFooter className='flex gap-2'>
-								{project.github && (
-									<Button
-										variant='outline'
-										size='sm'
-										asChild
-									>
-										<Link
-											href={project.github}
-											target='_blank'
-											rel='noopener noreferrer'
+											<Button
+												variant='outline'
+												size='sm'
+												asChild
+											>
+												<Link
+													href={project.github}
+													target='_blank'
+													rel='noopener noreferrer'
+												>
+													<Github className='h-4 w-4 mr-2' />
+													GitHub
+												</Link>
+											</Button>
+										</MotionDiv>
+									)}
+									{project.live && (
+										<MotionDiv
+											whileHover={{ scale: 1.05 }}
+											whileTap={{ scale: 0.95 }}
 										>
-											<Github className='h-4 w-4 mr-2' />
-											GitHub
-										</Link>
-									</Button>
-								)}
-								{project.live && (
-									<Button
-										size='sm'
-										asChild
-									>
-										<Link
-											href={project.live}
-											target='_blank'
-											rel='noopener noreferrer'
-										>
-											<ExternalLink className='h-4 w-4 mr-2' />
-											Live Demo
-										</Link>
-									</Button>
-								)}
-							</CardFooter>
-						</Card>
+											<Button
+												size='sm'
+												asChild
+											>
+												<Link
+													href={project.live}
+													target='_blank'
+													rel='noopener noreferrer'
+												>
+													<ExternalLink className='h-4 w-4 mr-2' />
+													Live Demo
+												</Link>
+											</Button>
+										</MotionDiv>
+									)}
+								</CardFooter>
+							</Card>
+						</MotionDiv>
 					))}
 				</div>
 			</div>
-		</section>
+		</MotionSection>
 	);
 }

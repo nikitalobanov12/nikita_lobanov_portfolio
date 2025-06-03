@@ -4,6 +4,7 @@ import './globals.css';
 import { Inter as FontSans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/next';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const fontSans = FontSans({
 	subsets: ['latin'],
@@ -26,10 +27,17 @@ export default function RootLayout({
 			suppressHydrationWarning
 		>
 			<body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
-				<div className='relative flex min-h-screen flex-col'>
-					{children}
-					<Analytics />
-				</div>
+				<ThemeProvider
+					attribute='class'
+					defaultTheme='system'
+					enableSystem
+					disableTransitionOnChange
+				>
+					<div className='relative flex min-h-screen flex-col'>
+						{children}
+						<Analytics />
+					</div>
+				</ThemeProvider>
 				<div id='mobile-menu-root'></div>
 			</body>
 		</html>
