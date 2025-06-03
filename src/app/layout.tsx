@@ -14,6 +14,11 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
 	title: 'Nikita Lobanov | Full-Stack Web Developer',
 	description: 'Full-Stack Web Developer portfolio showcasing projects and experience',
+	icons: {
+		icon: '/logo.svg',
+		shortcut: '/logo.svg',
+		apple: '/logo.svg',
+	},
 };
 
 export default function RootLayout({
