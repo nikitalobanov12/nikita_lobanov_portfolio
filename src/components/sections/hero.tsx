@@ -51,7 +51,8 @@ export function HeroSection() {
 				className='text-lg md:text-xl max-w-[600px] text-muted-foreground mt-4'
 				variants={itemVariants}
 			>
-				Passionate about building modern, scalable web applications with TypeScript, React, and Node.js. Currently studying at BCIT with hands-on experience in full-stack development and production deployments.
+				Passionate about building modern, scalable applications across web and desktop platforms. Experienced with TypeScript, React, & Node.js, specializing in full-stack development.
+
 			</MotionP>
 
 			<MotionDiv

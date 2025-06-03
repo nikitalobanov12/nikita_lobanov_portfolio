@@ -5,9 +5,9 @@ import { MotionSection, MotionDiv } from '@/components/motion-components';
 
 export function SkillsSection() {
 	const skills = {
-		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML & CSS', 'C#', 'Java', 'Bash'],
-		technologies: ['Git', 'Node.js', 'React.js', 'Next.js', 'Tailwind', 'PostgreSQL', 'Prisma', 'Express.js', 'Linux', 'Firebase Firestore', 'Redis', 'Stripe', 'OpenAI API'],
-		tools: ['Jira', 'GitHub', 'Trello', 'Vite', 'Notion', 'Firebase', 'VS Code'],
+		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML & CSS', 'Rust', 'C#', 'Java', 'Bash'],
+		technologies: ['Git', 'Node.js', 'React.js', 'Next.js', 'Vite',  'Tailwind', 'PostgreSQL', 'Prisma', 'Express.js', 'Linux', 'Firebase Firestore', 'Redis', 'Tauri','Electron', 'Stripe', 'OpenAI API'],
+		tools: ['Jira', 'GitHub', 'Trello', 'Vite', 'Notion', 'Firebase'],
 	};
 
 	const containerVariants = {
