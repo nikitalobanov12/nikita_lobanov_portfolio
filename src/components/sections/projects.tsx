@@ -7,6 +7,15 @@ import Link from 'next/link';
 export function ProjectsSection() {
 	const projects = [
 		{
+			title: 'DayFlow',
+			description: 'A cross-platform desktop productivity application built with Tauri, React, and Rust, demonstrating expertise in systems programming and modern desktop development. Features native performance with web technologies and automated cross-platform distribution.',
+			details: 'Showcases advanced technical skills including Rust backend development, SQLite database integration, GitHub Actions CI/CD pipelines, and cross-platform binary compilation. Implements modern UI/UX principles with Tailwind CSS and TypeScript, delivering native desktop performance across Windows, macOS, and Linux.',
+			date: 'June 2025',
+			tags: ['React', 'TypeScript', 'Rust', 'Tauri', 'SQLite', 'Tailwind', 'GitHub Actions'],
+			github: 'https://github.com/nikitalobanov12/dayflow',
+			live: 'https://dayflow-landing-page.vercel.app/',
+		},
+		{
 			title: 'Circles',
 			description: 'An advanced social media application with Next.js, TypeScript, and PostgreSQL, showcasing full-stack expertise through complex database design, real-time features, and performance optimization.',
 			details: 'Features include authentication systems, API design, scalable architecture patterns, Redis caching for performance optimization, and enterprise-grade image processing. Demonstrates production-ready development skills with modern web technologies.',
@@ -23,7 +32,6 @@ export function ProjectsSection() {
 			tags: ['Next.js', 'TypeScript', 'Firebase', 'Stripe', 'Sass CSS', 'OpenAI API'],
 			live: 'https://affistash.com',
 		},
-	
 	];
 
 	return (
