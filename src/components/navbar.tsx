@@ -85,7 +85,7 @@ export function Navbar() {
 								<a
 									href='/resume.pdf'
 									target='_blank'
-									download='Nikita_Lobanov_Resume.pdf'
+									download='nikita_lobanov_resume.pdf'
 									className='cursor-pointer w-full flex items-center'
 								>
 									Download Resume
@@ -126,9 +126,9 @@ export function Navbar() {
 						<a
 							href='/resume.pdf'
 							target='_blank'
-							download='Nikita_Lobanov_Resume.pdf'
+							download='nikita_lobanov_resume.pdf'
 						>
-							Resume
+							Download Resume
 						</a>
 					</Button>
 					<ThemeToggle />
