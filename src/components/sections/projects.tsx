@@ -51,7 +51,7 @@ export function ProjectsSection() {
 					transition={{ duration: 0.5, delay: 0.1 }}
 					viewport={{ once: true }}
 				>
-					<h2 className='text-3xl font-bold tracking-tight'>Projects</h2>
+					<h2 className='text-3xl font-bold tracking-tight section-heading'>Projects</h2>
 					<p className='text-muted-foreground'>A showcase of my recent development work featuring full-stack applications with modern technologies</p>
 				</MotionDiv>
 				<div className='grid gap-6 md:grid-cols-2'>
@@ -64,9 +64,9 @@ export function ProjectsSection() {
 							viewport={{ once: true }}
 							whileHover={{ y: -5, transition: { duration: 0.2 } }}
 						>
-							<Card className='flex flex-col h-full hover:shadow-lg transition-shadow duration-300'>
+							<Card className='flex flex-col h-full hover:shadow-lg transition-shadow duration-300 project-card enhanced-card'>
 								<CardHeader>
-									<CardTitle>{project.title}</CardTitle>
+									<CardTitle className=''>{project.title}</CardTitle>
 									<CardDescription>{project.date}</CardDescription>
 								</CardHeader>
 								<CardContent className='flex-1'>
@@ -83,7 +83,7 @@ export function ProjectsSection() {
 											>
 												<Badge
 													variant='secondary'
-													className='hover:bg-primary hover:text-primary-foreground transition-colors duration-200'
+													className='hover:bg-blue-500 hover:text-white transition-colors duration-200 blue-glow'
 												>
 													{tag}
 												</Badge>
@@ -121,6 +121,7 @@ export function ProjectsSection() {
 											<Button
 												size='sm'
 												asChild
+												className='btn-blue-gradient'
 											>
 												<Link
 													href={project.live}

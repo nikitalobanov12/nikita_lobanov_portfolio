@@ -33,39 +33,37 @@ export function HeroSection() {
 			initial='hidden'
 			animate='visible'
 		>
+			{' '}
 			<MotionH1
-				className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent'
+				className='text-4xl md:text-6xl font-bold gradient-text'
 				variants={itemVariants}
 			>
 				Nikita Lobanov
 			</MotionH1>
-
 			<MotionH2
-				className='text-2xl md:text-3xl text-muted-foreground'
+				className='text-2xl md:text-3xl text-blue-600 dark:text-blue-400 font-medium'
 				variants={itemVariants}
 			>
 				Full-Stack Web Developer
-			</MotionH2>
-
+			</MotionH2>{' '}
 			<MotionP
-				className='text-lg md:text-xl max-w-[600px] text-muted-foreground mt-4'
+				className='text-lg md:text-xl max-w-[600px] text-muted-foreground mt-4 leading-relaxed'
 				variants={itemVariants}
 			>
-				Passionate about building modern, scalable applications across web and desktop platforms. Experienced with TypeScript, React, & Node.js, specializing in full-stack development.
-
+				Passionate about building modern, scalable applications across web and desktop platforms. Experienced with <span className='font-semibold italic'>TypeScript</span>, <span className='font-semibold italic'>React</span>, & <span className='font-semibold italic'>Node.js</span>, specializing in full-stack development.
 			</MotionP>
-
 			<MotionDiv
 				className='flex flex-wrap gap-4 mt-6'
 				variants={itemVariants}
 			>
+				{' '}
 				<MotionDiv
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
 				>
 					<Button
 						asChild
-						className='group'
+						className='group blue-glow bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white border-0'
 					>
 						<Link href='#contact'>
 							Contact me
@@ -79,7 +77,6 @@ export function HeroSection() {
 						</Link>
 					</Button>
 				</MotionDiv>
-
 				<div className='flex items-center gap-4'>
 					{[
 						{ href: 'https://github.com/nikitalobanov12', icon: Github, label: 'GitHub' },
@@ -94,10 +91,12 @@ export function HeroSection() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 1 + index * 0.1 }}
 						>
+							{' '}
 							<Button
 								variant='outline'
 								size='icon'
 								asChild
+								className='hover-glow border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400'
 							>
 								<Link
 									href={social.href}

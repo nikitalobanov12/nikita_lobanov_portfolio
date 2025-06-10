@@ -9,10 +9,11 @@ export function Navbar() {
 	return (
 		<header className='sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
 			<div className='container flex h-14 items-center px-4 mx-auto'>
+				{' '}
 				<div className='flex'>
 					<Link
 						href='/'
-						className='mr-6 flex items-center space-x-2 font-bold transition-all hover:text-gray-700'
+						className='mr-6 flex items-center space-x-2 font-bold transition-all hover:text-blue-600 dark:hover:text-blue-400'
 					>
 						<span>Nikita Lobanov</span>
 					</Link>
@@ -97,31 +98,32 @@ export function Navbar() {
 				<nav className='hidden md:flex items-center space-x-6 text-sm font-medium flex-1 justify-end'>
 					<Link
 						href='#about'
-						className='transition-all hover:text-gray-600'
+						className='transition-all hover:text-blue-600 dark:hover:text-blue-400 blue-accent'
 					>
 						About
 					</Link>
 					<Link
 						href='#experience'
-						className='transition-all hover:text-gray-600'
+						className='transition-all hover:text-blue-600 dark:hover:text-blue-400 blue-accent'
 					>
 						Experience
 					</Link>
 					<Link
 						href='#projects'
-						className='transition-all hover:text-gray-600'
+						className='transition-all hover:text-blue-600 dark:hover:text-blue-400 blue-accent'
 					>
 						Projects
 					</Link>
 					<Link
 						href='#contact'
-						className='transition-all hover:text-gray-600'
+						className='transition-all hover:text-blue-600 dark:hover:text-blue-400 blue-accent'
 					>
 						Contact
 					</Link>
 					<Button
 						asChild
 						size='sm'
+						className='btn-blue-gradient'
 					>
 						<a
 							href='/resume.pdf'

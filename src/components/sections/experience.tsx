@@ -31,21 +31,25 @@ export function ExperienceSection() {
 			id='experience'
 			className='py-16'
 		>
+			{' '}
 			<div className='space-y-6'>
 				<div className='space-y-2'>
-					<h2 className='text-3xl font-bold tracking-tight'>Experience</h2>
+					<h2 className='text-3xl font-bold tracking-tight section-heading'>Experience</h2>
 					<p className='text-muted-foreground'>My professional journey and work experience</p>
 				</div>
 
 				<div className='grid gap-6'>
 					{experiences.map((exp, index) => (
-						<Card key={index}>
+						<Card
+							key={index}
+							className='enhanced-card hover-glow'
+						>
 							{' '}
 							<CardHeader>
 								<div className='flex flex-col md:flex-row md:items-center md:justify-between'>
 									<div>
-										<CardTitle>
-											{exp.title} at {exp.company}
+										<CardTitle className=''>
+											{exp.title} at <span className='blue-highlight'>{exp.company}</span>
 										</CardTitle>
 										<CardDescription>
 											{exp.period} • {exp.location}
