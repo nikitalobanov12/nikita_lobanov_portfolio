@@ -9,10 +9,10 @@ export function ProjectsSection() {
 	const projects = [
 		{
 			title: 'DayFlow',
-			description: 'A cross-platform desktop productivity application built with Tauri, React, and Rust, demonstrating expertise in systems programming and modern desktop development. Features native performance with web technologies and automated cross-platform distribution.',
-			details: 'Showcases advanced technical skills including Rust backend development, SQLite database integration, GitHub Actions CI/CD pipelines, and cross-platform binary compilation. Implements modern UI/UX principles with Tailwind CSS and TypeScript, delivering native desktop performance across Windows, macOS, and Linux.',
+			description: 'Engineered a hybrid cross-platform productivity application using Tauri 2.0 and React 18, demonstrating advanced systems programming and modern full-stack development expertise.',
+			details: 'Implemented PostgreSQL/Supabase integration with real-time synchronization, automated CI/CD pipelines with GitHub Actions, and cross-platform binary compilation, delivering native desktop performance and responsive web functionality across Windows, macOS, and Linux with modern UI/UX design.',
 			date: 'June 2025',
-			tags: ['React', 'TypeScript', 'Rust', 'Tauri', 'SQLite', 'Tailwind', 'GitHub Actions'],
+			tags: ['React', 'TypeScript', 'Rust', 'Tauri', 'PostgreSQL', 'Supabase', 'GitHub Actions'],
 			github: 'https://github.com/nikitalobanov12/dayflow',
 			live: 'https://dayflow-landing-page.vercel.app/',
 		},
