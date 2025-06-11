@@ -28,26 +28,8 @@ export function EducationSection() {
 				<CardContent>
 					<div className='space-y-4'>
 						<div>
-							<h4 className='font-medium mb-2'>Core Development Skills</h4>
-							<ul className='list-disc pl-6 space-y-1'>
-								<li className='text-sm text-muted-foreground'>Frontend & Backend Web Development</li>
-								<li className='text-sm text-muted-foreground'>Software Design & Programming Fundamentals</li>
-								<li className='text-sm text-muted-foreground'>Modern JavaScript Frameworks & Server Technologies</li>
-								<li className='text-sm text-muted-foreground'>C# & .NET Web Application Development</li>
-								<li className='text-sm text-muted-foreground'>Server-Side Programming & API Development</li>
-								<li className='text-sm text-muted-foreground'>Object-Oriented Programming & Design Patterns</li>
-							</ul>
-						</div>
-						<div>
-							<h4 className='font-medium mb-2'>Professional Development</h4>
-							<ul className='list-disc pl-6 space-y-1'>
-								<li className='text-sm text-muted-foreground'>Agile Software Development Methodologies</li>
-								<li className='text-sm text-muted-foreground'>Database Design & Management</li>
-								<li className='text-sm text-muted-foreground'>User Experience & Interface Design</li>
-								<li className='text-sm text-muted-foreground'>System Administration & DevOps</li>
-								<li className='text-sm text-muted-foreground'>Digital Marketing & Business Strategy</li>
-								<li className='text-sm text-muted-foreground'>Real-World Project Development & Deployment</li>
-							</ul>
+							<h4 className='font-medium mb-2'>Relevant Courses</h4>
+							<p className='text-sm text-muted-foreground'>Agile Software Development, Data Structures, Algorithms, Databases, Operating Systems, Object-Oriented Programming.</p>
 						</div>
 					</div>
 				</CardContent>

@@ -3,11 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MotionSection, MotionDiv } from '@/components/motion-components';
 
-export function SkillsSection() {
-	const skills = {
-		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML & CSS', 'Rust', 'C#', 'Java', 'Bash'],
-		technologies: ['Git', 'Node.js', 'React.js', 'Next.js', 'Vite', 'Tailwind', 'PostgreSQL', 'Prisma', 'Express.js', 'Linux', 'Firebase Firestore', 'Redis', 'Tauri', 'Electron', 'Stripe', 'OpenAI API'],
-		tools: ['Jira', 'GitHub', 'Trello', 'Vite', 'Notion', 'Firebase'],
+export function SkillsSection() {	const skills = {
+		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML & CSS', 'Rust', 'Java'],
+		frameworks: ['React', 'Node.js', 'Express', 'Prisma', 'Tailwind', 'Redis', 'Tauri'],
+		tools: ['Jira', 'Git', 'GitHub', 'Vite', 'Vercel', 'GitHub Actions', 'Bash', 'WSL', 'PostgreSQL', 'Firebase', 'Supabase'],
 	};
 
 	const containerVariants = {
@@ -63,8 +62,7 @@ export function SkillsSection() {
 					<Tabs
 						defaultValue='languages'
 						className='w-full'
-					>
-						<TabsList className='grid grid-cols-3 mb-8 bg-muted'>
+					>						<TabsList className='grid grid-cols-3 mb-8 bg-muted'>
 							<TabsTrigger
 								value='languages'
 								className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'
@@ -72,16 +70,16 @@ export function SkillsSection() {
 								Languages
 							</TabsTrigger>
 							<TabsTrigger
-								value='technologies'
+								value='frameworks'
 								className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'
 							>
-								Technologies
+								Frameworks & Libraries
 							</TabsTrigger>
 							<TabsTrigger
 								value='tools'
 								className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'
 							>
-								Tools
+								Database & Infrastructure
 							</TabsTrigger>
 						</TabsList>
 
@@ -120,16 +118,14 @@ export function SkillsSection() {
 									</MotionDiv>
 								</CardContent>
 							</Card>
-						</TabsContent>
-
-						<TabsContent
-							value='technologies'
+						</TabsContent>						<TabsContent
+							value='frameworks'
 							className='mt-0'
 						>
 							{' '}
 							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle className=''>Technologies</CardTitle>
+									<CardTitle className=''>Frameworks & Libraries</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<MotionDiv
@@ -140,9 +136,9 @@ export function SkillsSection() {
 										viewport={{ once: true }}
 									>
 										{' '}
-										{skills.technologies.map(tech => (
+										{skills.frameworks.map(framework => (
 											<MotionDiv
-												key={tech}
+												key={framework}
 												variants={skillVariants}
 												whileHover={{ scale: 1.05, rotate: -1 }}
 												whileTap={{ scale: 0.95 }}
@@ -151,7 +147,7 @@ export function SkillsSection() {
 													variant='secondary'
 													className='px-3 py-1 text-sm bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'
 												>
-													{tech}
+													{framework}
 												</Badge>
 											</MotionDiv>
 										))}
@@ -164,10 +160,9 @@ export function SkillsSection() {
 							value='tools'
 							className='mt-0'
 						>
-							{' '}
-							<Card className='enhanced-card'>
+							{' '}							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle className=''>Tools</CardTitle>
+									<CardTitle className=''>Database & Infrastructure</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<MotionDiv

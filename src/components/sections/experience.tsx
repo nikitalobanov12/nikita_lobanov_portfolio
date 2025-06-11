@@ -13,17 +13,6 @@ export function ExperienceSection() {
 				'Collaborated with IT teams to resolve a global CrowdStrike outage, restoring access for 1,300+ employees across 5 time zones.',
 			],
 		},
-		{
-			title: 'Cook',
-			company: 'The Victor',
-			period: 'June 2024 - Current',
-			location: 'Vancouver, BC',
-			description: [
-				'Team Collaboration: Worked closely with servers, sous chefs, and managers in a dynamic team to deliver 200-400+ daily orders, aligning workflows to meet tight deadlines. (Mirrors Agile teamwork in software development).',
-				'Thrived in high-pressure, fast-paced environments by prioritizing tasks and troubleshooting unexpected issues (e.g., equipment failures, last-minute orders), ensuring seamless service during peak hours.',
-				'Consistently followed complex recipes with exact measurements and plating standards, minimizing errors and waste. (Analogous to writing clean, efficient code and debugging.)',
-			],
-		},
 	];
 
 	return (
