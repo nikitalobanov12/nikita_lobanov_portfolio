@@ -47,11 +47,11 @@ export function ExperienceSection() {
 								</div>
 							</CardHeader>
 							<CardContent>
-								<ul className='list-disc pl-6 space-y-2'>
+								<ul className='list-disc pl-6 space-y-3'>
 									{exp.description.map((item, i) => (
 										<li
 											key={i}
-											className='text-sm text-muted-foreground'
+											className='text-base text-muted-foreground leading-relaxed'
 										>
 											{item}
 										</li>

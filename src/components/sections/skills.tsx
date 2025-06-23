@@ -109,7 +109,7 @@ export function SkillsSection() {	const skills = {
 											>
 												<Badge
 													variant='secondary'
-													className='px-3 py-1 text-sm bg-blue-100  hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'
+													className='px-4 py-2 text-base bg-blue-100  hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'
 												>
 													{skill}
 												</Badge>
@@ -145,7 +145,7 @@ export function SkillsSection() {	const skills = {
 											>
 												<Badge
 													variant='secondary'
-													className='px-3 py-1 text-sm bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'
+													className='px-4 py-2 text-base bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'
 												>
 													{framework}
 												</Badge>
@@ -181,7 +181,7 @@ export function SkillsSection() {	const skills = {
 											>
 												<Badge
 													variant='secondary'
-													className='px-3 py-1 text-sm hover:bg-primary hover:text-primary-foreground transition-colors duration-200 cursor-default'
+													className='px-4 py-2 text-base hover:bg-primary hover:text-primary-foreground transition-colors duration-200 cursor-default'
 												>
 													{tool}
 												</Badge>

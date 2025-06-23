@@ -70,8 +70,8 @@ export function ProjectsSection() {
 									<CardDescription>{project.date}</CardDescription>
 								</CardHeader>
 								<CardContent className='flex-1'>
-									<p className='mb-2'>{project.description}</p>
-									<p className='text-sm text-muted-foreground'>{project.details}</p>
+									<p className='mb-3 text-base leading-relaxed'>{project.description}</p>
+									<p className='text-base text-muted-foreground leading-relaxed'>{project.details}</p>
 									<div className='flex flex-wrap gap-2 mt-4'>
 										{project.tags.map((tag, tagIndex) => (
 											<MotionDiv

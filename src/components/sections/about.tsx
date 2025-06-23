@@ -11,7 +11,7 @@ export function AboutSection() {
 					<p className='text-muted-foreground'>Full-stack developer specializing in web applications, desktop development, and systems programming</p>
 				</div>{' '}				<div className='prose dark:prose-invert'>
 					<p>
-						I build web and desktop applications using <span className='blue-highlight'>React</span>, <span className='blue-highlight'>Node.js</span>, and <span className='blue-highlight'>Rust</span>. I&apos;ve worked on real-time systems, deployed full-stack apps, and contributed to both solo and team-based projects. I focus on writing maintainable code and delivering working software.
+						I build web and desktop applications using <span className='blue-highlight'>React</span>, <span className='blue-highlight'>Node.js</span>, and <span className='blue-highlight'>PostgreSQL</span>. I&apos;ve worked on real-time systems, deployed full-stack apps, and contributed to both solo and team-based projects. I focus on writing maintainable code and delivering working software.
 					</p>
 					<br />
 					<p>

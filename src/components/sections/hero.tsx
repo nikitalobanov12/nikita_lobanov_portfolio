@@ -50,7 +50,7 @@ export function HeroSection() {
 				className='text-lg md:text-xl max-w-[600px] text-muted-foreground mt-4 leading-relaxed'
 				variants={itemVariants}
 			>
-				I build web and desktop applications using <span className='font-semibold italic'>React</span>, <span className='font-semibold italic'>Node.js</span>, and <span className='font-semibold italic'>Rust</span>. I&apos;ve worked on real-time systems, deployed full-stack apps, and contributed to both solo and team-based projects. I focus on writing maintainable code and delivering working software.
+				I build web and desktop applications using <span className='font-semibold italic'>React</span>, <span className='font-semibold italic'>Node.js</span>, and <span className='font-semibold italic'>PostgreSQL</span>. I&apos;ve worked on real-time systems, deployed full-stack apps, and contributed to both solo and team-based projects. I focus on writing maintainable code and delivering working software.
 			</MotionP>
 			<MotionDiv
 				className='flex flex-wrap gap-4 mt-6'
