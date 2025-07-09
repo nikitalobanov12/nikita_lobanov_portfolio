@@ -8,30 +8,57 @@ import { MotionDiv, MotionSection } from '@/components/motion-components';
 export function ProjectsSection() {
 	const projects = [
 		{
+			title: 'Notion Clone',
+			description: 'A collaborative document editor inspired by Notion, built for real-time editing and scalable deployment.',
+			details: `
+- Deployed a Dockerized application to AWS ECS Fargate, utilizing ECR for container storage, RDS PostgreSQL for persistent data, and ElastiCache Redis for high-speed caching.
+- Optimized Redis cache layer for real-time document updates and session storage, significantly reducing database load and latency.
+- Implemented type-safe APIs with tRPC, ensuring end-to-end type safety and robust input validation, eliminating runtime errors.
+- Built a secure authentication system using NextAuth.js and Redis session management for improved performance and security.
+- Configured AWS Application Load Balancer and CloudWatch for traffic distribution and system monitoring.
+- Achieved comprehensive test coverage using Playwright for end-to-end testing and Vitest for unit/integration tests.
+- Followed AWS security best practices, including IAM roles, VPC networking, and Secrets Manager for sensitive configuration.
+- Designed for horizontal scalability and high availability, with zero-downtime deployments and automated database migrations.
+`,
+			date: '2024',
+			tags: ['AWS ECS', 'Docker', 'tRPC', 'Redis', 'PostgreSQL', 'NextAuth.js', 'Playwright', 'Vitest', 'TypeScript', 'Next.js'],
+			github: 'https://github.com/nikitalobanov12/notion-clone',
+			live: '',
+		},
+		{
 			title: 'DayFlow',
-			description: 'Built a cross-platform productivity app (Windows, macOS, Linux) with native performance using Tauri 2.0 and React 18',
-			details: 'Integrated PostgreSQL/Supabase for real-time syncing and offline support. Set up GitHub Actions for automated CI/CD and cross-platform builds. Designed a modern, responsive UI/UX for both web and desktop. Achieved cold starts under 3s and <100ms sync latency.',
-			date: 'June 2025',
-			tags: ['React', 'TypeScript', 'Rust', 'Tauri', 'SQLite', 'GitHub Actions'],
+			description: 'A cross-platform productivity app for task and time management, featuring native performance and cloud sync.',
+			details: `
+- Built a native desktop application for Windows, macOS, and Linux using Tauri 2.0 and React 19, achieving cold starts under 3s and <100ms sync latency.
+- Integrated PostgreSQL for persistent storage and Supabase for real-time syncing and offline support.
+- Automated build and deployment pipeline with GitHub Actions CI/CD for desktop releases and Vercel deployments.
+- Optimized database performance using indexes, query profiling, and efficient SQL without ORM, reducing query load and improving responsiveness.
+- Improved React component performance through optimistic UI updates, memoization, and render optimization.
+- Integrated Stripe payment processing for premium features and Google GenAI for AI-powered productivity enhancements.
+- Designed a modern, responsive UI/UX for both web and desktop, with accessibility and dark mode support.
+- Implemented robust error handling, crash reporting, and user analytics for continuous improvement.
+`,
+			date: '2024',
+			tags: ['React', 'Tauri', 'PostgreSQL', 'Supabase', 'GitHub Actions', 'Stripe', 'Google GenAI', 'TypeScript', 'Node.js'],
 			github: 'https://github.com/nikitalobanov12/dayflow',
 			live: 'https://dayflow-landing-page.vercel.app/',
 		},
 		{
 			title: 'Circles',
-			description: 'Developed a scalable social media app with real-time updates and Redis caching',
-			details: 'Built user authentication, API routes, and media upload pipelines. Designed database schemas to support social graphs, comments, and messaging. Optimized backend for low-latency reads/writes and horizontal scaling. Delivered full production deployment on Vercel.',
-			date: 'May 2025',
-			tags: ['Next.js', 'React', 'Prisma PostgreSQL', 'Redis', 'Tailwind'],
+			description: 'A full-stack social application with user groups, comments, activity feeds, and real-time updates.',
+			details: `
+- Built with Next.js, Prisma, PostgreSQL, and Redis, deployed on Vercel for global scalability and fast edge delivery.
+- Implemented user authentication, group management, comments, and activity feeds with efficient API routes and media upload pipelines.
+- Reduced API response times by 90% by implementing Redis caching between backend and database layers.
+- Optimized database performance by resolving N+1 query problems and reducing data overfetching.
+- Integrated Cloudinary for image storage and conversion, and converted Figma designs to responsive UI with Tailwind CSS.
+- Collaborated with a team using Agile methodology across multiple sprints, with daily standups and sprint planning.
+- Designed for extensibility, supporting new features and integrations with minimal downtime.
+`,
+			date: '2024',
+			tags: ['Next.js', 'Prisma', 'PostgreSQL', 'Redis', 'Vercel', 'Tailwind CSS', 'Cloudinary', 'TypeScript'],
 			github: 'https://github.com/ILHT-IDSP/IDSP-Circle',
 			live: 'https://idsp-circle-tawny.vercel.app/',
-		},
-		{
-			title: 'Affistash',
-			description: 'Collaborated in a 4-person team to build an AI-powered affiliate marketing SaaS',
-			details: 'Integrated OpenAI to generate personalized marketing strategies. Implemented Stripe for subscription payments and Firebase for authentication. Built a dashboard for users to manage campaigns and brand matches. Launched MVP with end-to-end CI/CD and secure user management.',
-			date: 'March 2024',
-			tags: ['Next.js', 'TypeScript', 'Firebase', 'Stripe', 'Sass CSS', 'OpenAI API'],
-			live: 'https://affistash.com',
 		},
 	];
 	return (
@@ -71,7 +98,7 @@ export function ProjectsSection() {
 								</CardHeader>
 								<CardContent className='flex-1'>
 									<p className='mb-3 text-base leading-relaxed'>{project.description}</p>
-									<p className='text-base text-muted-foreground leading-relaxed'>{project.details}</p>
+									<pre className='text-base text-muted-foreground leading-relaxed whitespace-pre-wrap'>{project.details}</pre>
 									<div className='flex flex-wrap gap-2 mt-4'>
 										{project.tags.map((tag, tagIndex) => (
 											<MotionDiv

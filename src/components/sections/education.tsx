@@ -6,7 +6,6 @@ export function EducationSection() {
 			id='education'
 			className='space-y-6 h-full flex flex-col'
 		>
-			{' '}
 			<div className='space-y-2'>
 				<h2 className='text-3xl font-bold tracking-tight section-heading'>Education</h2>
 				<p className='text-muted-foreground'>My academic background and qualifications</p>
@@ -24,12 +23,12 @@ export function EducationSection() {
 							<span className='text-sm text-muted-foreground'>Expected April 2026</span>
 						</div>
 					</div>
-				</CardHeader>{' '}
+				</CardHeader>
 				<CardContent>
 					<div className='space-y-4'>
 						<div>
 							<h4 className='font-medium mb-2'>Relevant Courses</h4>
-							<p className='text-sm text-muted-foreground'>Agile Software Development, Data Structures, Algorithms, Databases, Operating Systems, Object-Oriented Programming.</p>
+							<p className='text-sm text-muted-foreground'>Agile Software Development, Data Structures & Algorithms, Databases, Operating Systems, Object-Oriented Programming.</p>
 						</div>
 					</div>
 				</CardContent>

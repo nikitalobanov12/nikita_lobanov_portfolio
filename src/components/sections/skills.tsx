@@ -3,10 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MotionSection, MotionDiv } from '@/components/motion-components';
 
-export function SkillsSection() {	const skills = {
-		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML & CSS', 'Rust', 'Java'],
-		frameworks: ['React', 'Node.js', 'Express', 'Prisma', 'Tailwind', 'Redis', 'Tauri'],
-		tools: ['Jira', 'Git', 'GitHub', 'Vite', 'Vercel', 'GitHub Actions', 'Bash', 'WSL', 'PostgreSQL', 'Firebase', 'Supabase'],
+export function SkillsSection() {
+	const skills = {
+		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML & CSS'],
+		frameworks: ['React', 'Prisma', 'Tailwind', 'Tauri', 'Node.js', 'Express'],
+		database: ['PostgreSQL', 'AWS RDS', 'AWS ElastiCache', 'Redis', 'AWS ECS', 'AWS ECR', 'AWS VPC', 'AWS S3'],
+		tools: ['Jira', 'Git', 'GitHub', 'Vite', 'Vercel', 'GitHub Actions', 'Docker'],
 	};
 
 	const containerVariants = {
@@ -58,97 +60,24 @@ export function SkillsSection() {	const skills = {
 					transition={{ duration: 0.6, delay: 0.2 }}
 					viewport={{ once: true }}
 				>
-					{' '}
-					<Tabs
-						defaultValue='languages'
-						className='w-full'
-					>						<TabsList className='grid grid-cols-3 mb-8 bg-muted'>
-							<TabsTrigger
-								value='languages'
-								className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'
-							>
-								Languages
-							</TabsTrigger>
-							<TabsTrigger
-								value='frameworks'
-								className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'
-							>
-								Frameworks & Libraries
-							</TabsTrigger>
-							<TabsTrigger
-								value='tools'
-								className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'
-							>
-								Database & Infrastructure
-							</TabsTrigger>
+					<Tabs defaultValue='languages' className='w-full'>
+						<TabsList className='grid grid-cols-4 mb-8 bg-muted'>
+							<TabsTrigger value='languages' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Languages</TabsTrigger>
+							<TabsTrigger value='frameworks' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Frameworks & Libraries</TabsTrigger>
+							<TabsTrigger value='database' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Database & Infrastructure</TabsTrigger>
+							<TabsTrigger value='tools' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Tools</TabsTrigger>
 						</TabsList>
 
-						<TabsContent
-							value='languages'
-							className='mt-0'
-						>
-							{' '}
+						<TabsContent value='languages' className='mt-0'>
 							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle >Programming Languages</CardTitle>
+									<CardTitle>Programming Languages</CardTitle>
 								</CardHeader>
 								<CardContent>
-									<MotionDiv
-										className='flex flex-wrap gap-2'
-										variants={containerVariants}
-										initial='hidden'
-										whileInView='visible'
-										viewport={{ once: true }}
-									>
+									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
 										{skills.languages.map(skill => (
-											<MotionDiv
-												key={skill}
-												variants={skillVariants}
-												whileHover={{ scale: 1.05, rotate: 1 }}
-												whileTap={{ scale: 0.95 }}
-											>
-												<Badge
-													variant='secondary'
-													className='px-4 py-2 text-base bg-blue-100  hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'
-												>
-													{skill}
-												</Badge>
-											</MotionDiv>
-										))}
-									</MotionDiv>
-								</CardContent>
-							</Card>
-						</TabsContent>						<TabsContent
-							value='frameworks'
-							className='mt-0'
-						>
-							{' '}
-							<Card className='enhanced-card'>
-								<CardHeader>
-									<CardTitle className=''>Frameworks & Libraries</CardTitle>
-								</CardHeader>
-								<CardContent>
-									<MotionDiv
-										className='flex flex-wrap gap-2'
-										variants={containerVariants}
-										initial='hidden'
-										whileInView='visible'
-										viewport={{ once: true }}
-									>
-										{' '}
-										{skills.frameworks.map(framework => (
-											<MotionDiv
-												key={framework}
-												variants={skillVariants}
-												whileHover={{ scale: 1.05, rotate: -1 }}
-												whileTap={{ scale: 0.95 }}
-											>
-												<Badge
-													variant='secondary'
-													className='px-4 py-2 text-base bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'
-												>
-													{framework}
-												</Badge>
+											<MotionDiv key={skill} variants={skillVariants} whileHover={{ scale: 1.05, rotate: 1 }} whileTap={{ scale: 0.95 }}>
+												<Badge variant='secondary' className='px-4 py-2 text-base bg-blue-100 hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'>{skill}</Badge>
 											</MotionDiv>
 										))}
 									</MotionDiv>
@@ -156,35 +85,50 @@ export function SkillsSection() {	const skills = {
 							</Card>
 						</TabsContent>
 
-						<TabsContent
-							value='tools'
-							className='mt-0'
-						>
-							{' '}							<Card className='enhanced-card'>
+						<TabsContent value='frameworks' className='mt-0'>
+							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle className=''>Database & Infrastructure</CardTitle>
+									<CardTitle>Frameworks & Libraries</CardTitle>
 								</CardHeader>
 								<CardContent>
-									<MotionDiv
-										className='flex flex-wrap gap-2'
-										variants={containerVariants}
-										initial='hidden'
-										whileInView='visible'
-										viewport={{ once: true }}
-									>
+									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+										{skills.frameworks.map(framework => (
+											<MotionDiv key={framework} variants={skillVariants} whileHover={{ scale: 1.05, rotate: -1 }} whileTap={{ scale: 0.95 }}>
+												<Badge variant='secondary' className='px-4 py-2 text-base bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'>{framework}</Badge>
+											</MotionDiv>
+										))}
+									</MotionDiv>
+								</CardContent>
+							</Card>
+						</TabsContent>
+
+						<TabsContent value='database' className='mt-0'>
+							<Card className='enhanced-card'>
+								<CardHeader>
+									<CardTitle>Database & Infrastructure</CardTitle>
+								</CardHeader>
+								<CardContent>
+									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+										{skills.database.map(db => (
+											<MotionDiv key={db} variants={skillVariants} whileHover={{ scale: 1.05, rotate: 2 }} whileTap={{ scale: 0.95 }}>
+												<Badge variant='secondary' className='px-4 py-2 text-base hover:bg-primary hover:text-primary-foreground transition-colors duration-200 cursor-default'>{db}</Badge>
+											</MotionDiv>
+										))}
+									</MotionDiv>
+								</CardContent>
+							</Card>
+						</TabsContent>
+
+						<TabsContent value='tools' className='mt-0'>
+							<Card className='enhanced-card'>
+								<CardHeader>
+									<CardTitle>Tools</CardTitle>
+								</CardHeader>
+								<CardContent>
+									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
 										{skills.tools.map(tool => (
-											<MotionDiv
-												key={tool}
-												variants={skillVariants}
-												whileHover={{ scale: 1.05, rotate: 2 }}
-												whileTap={{ scale: 0.95 }}
-											>
-												<Badge
-													variant='secondary'
-													className='px-4 py-2 text-base hover:bg-primary hover:text-primary-foreground transition-colors duration-200 cursor-default'
-												>
-													{tool}
-												</Badge>
+											<MotionDiv key={tool} variants={skillVariants} whileHover={{ scale: 1.05, rotate: 2 }} whileTap={{ scale: 0.95 }}>
+												<Badge variant='secondary' className='px-4 py-2 text-base hover:bg-primary hover:text-primary-foreground transition-colors duration-200 cursor-default'>{tool}</Badge>
 											</MotionDiv>
 										))}
 									</MotionDiv>

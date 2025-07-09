@@ -7,10 +7,12 @@ export function ExperienceSection() {
 			period: 'May 2024 - Aug 2024',
 			location: 'Vancouver, BC',
 			description: [
-				'Diagnosed and resolved application errors by analyzing system logs, error messages, and user-reported data.',
-				'Managed user support requests via Jira Service Desk: triaged, categorized, and prioritized 100+ tickets, escalating critical issues to senior engineers and maintaining 97% SLA compliance.',
-				'Monitored and maintained infrastructure health by conducting routine checks on servers (Windows), SQL databases, and REST APIs, ensuring 99.9% uptime for critical systems.',
-				'Collaborated with IT teams to resolve a global CrowdStrike outage, restoring access for 1,300+ employees across 5 time zones.',
+				'Diagnosed and resolved application errors by analyzing system logs, error messages, and employee-reported data in NetSuite and Oracle systems.',
+				'Managed employee support requests via Jira Service Desk: triaged, categorized, and prioritized 300+ tickets in 3 months, escalating critical issues to senior engineers.',
+				'Provided technical support for NetSuite ERP system, troubleshooting user access issues, data discrepancies, and workflow problems.',
+				'Monitored Oracle database performance and conducted routine health checks on Linux/Windows servers and REST APIs, ensuring 99.9% uptime for critical systems.',
+				'Collaborated with database administrators to resolve Oracle query optimization issues and data integrity problems.',
+				'Worked with IT team to resolve the global July 2024 CrowdStrike outage, restoring access for 1,300+ employees across 5 time zones in under 24 hours.'
 			],
 		},
 	];
@@ -20,7 +22,6 @@ export function ExperienceSection() {
 			id='experience'
 			className='py-16'
 		>
-			{' '}
 			<div className='space-y-6'>
 				<div className='space-y-2'>
 					<h2 className='text-3xl font-bold tracking-tight section-heading'>Experience</h2>
@@ -33,7 +34,6 @@ export function ExperienceSection() {
 							key={index}
 							className='enhanced-card hover-glow'
 						>
-							{' '}
 							<CardHeader>
 								<div className='flex flex-col md:flex-row md:items-center md:justify-between'>
 									<div>
@@ -41,7 +41,7 @@ export function ExperienceSection() {
 											{exp.title} at <span className='blue-highlight'>{exp.company}</span>
 										</CardTitle>
 										<CardDescription>
-											{exp.period} • {exp.location}
+											{exp.period}  {exp.location}
 										</CardDescription>
 									</div>
 								</div>
