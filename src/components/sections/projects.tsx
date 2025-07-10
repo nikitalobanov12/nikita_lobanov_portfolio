@@ -23,7 +23,7 @@ export function ProjectsSection() {
 			date: '2024',
 			tags: ['AWS ECS', 'Docker', 'tRPC', 'Redis', 'PostgreSQL', 'NextAuth.js', 'Playwright', 'Vitest', 'TypeScript', 'Next.js'],
 			github: 'https://github.com/nikitalobanov12/notion-clone',
-			live: '',
+			live: 'https://notion-clone.nikitalobanov.com',
 		},
 		{
 			title: 'DayFlow',
