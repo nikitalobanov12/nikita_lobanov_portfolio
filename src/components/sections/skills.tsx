@@ -5,10 +5,10 @@ import { MotionSection, MotionDiv } from '@/components/motion-components';
 
 export function SkillsSection() {
 	const skills = {
-		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML & CSS'],
-		frameworks: ['React', 'Prisma', 'Tailwind', 'Tauri', 'Node.js', 'Express'],
-		database: ['PostgreSQL', 'AWS RDS', 'AWS ElastiCache', 'Redis', 'AWS ECS', 'AWS ECR', 'AWS VPC', 'AWS S3'],
-		tools: ['Jira', 'Git', 'GitHub', 'Vite', 'Vercel', 'GitHub Actions', 'Docker'],
+		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML & CSS', 'Rust'],
+		frameworks: ['React', 'Prisma', 'Tailwind', 'Tauri', 'Node.js', 'Express', 'NestJS'],
+		database: ['PostgreSQL', 'AWS RDS', 'AWS ElastiCache', 'Redis', 'Microservices', 'REST API', 'GraphQL', 'AWS ECS', 'AWS ECR', 'AWS VPC', 'AWS S3', 'Vercel'],
+		tools: ['Jira', 'Git', 'GitHub', 'Vite', 'Vercel', 'GitHub Actions', 'Docker', 'Vitest', 'Playwright'],
 	};
 
 	const containerVariants = {

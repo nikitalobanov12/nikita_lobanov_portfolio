@@ -2,17 +2,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 export function ExperienceSection() {
 	const experiences = [
 		{
-			title: 'Application Support Intern',
+			title: 'Full Stack Development Intern',
 			company: 'Seaspan Corp',
 			period: 'May 2024 - Aug 2024',
 			location: 'Vancouver, BC',
 			description: [
-				'Diagnosed and resolved application errors by analyzing system logs, error messages, and employee-reported data in NetSuite and Oracle systems.',
-				'Managed employee support requests via Jira Service Desk: triaged, categorized, and prioritized 300+ tickets in 3 months, escalating critical issues to senior engineers.',
+				'Diagnosed and resolved application errors in NetSuite and Oracle systems by analyzing system logs and employee data.',
+				'Worked with IT team to resolve the global July 2024 CrowdStrike outage, restoring access for 1,300+ employees across 5 time zones in under 24 hours.',
+				'Monitored Oracle database performance and conducted routine health checks on Linux/Windows servers and REST APIs, ensuring 99.9% uptime.',
+				'Managed employee support requests via Jira Service Desk: triaged, categorized, and prioritized 300+ tickets in 3 months.',
+				'Collaborated with database administrators to optimize Oracle queries and maintain data integrity.',
 				'Provided technical support for NetSuite ERP system, troubleshooting user access issues, data discrepancies, and workflow problems.',
-				'Monitored Oracle database performance and conducted routine health checks on Linux/Windows servers and REST APIs, ensuring 99.9% uptime for critical systems.',
-				'Collaborated with database administrators to resolve Oracle query optimization issues and data integrity problems.',
-				'Worked with IT team to resolve the global July 2024 CrowdStrike outage, restoring access for 1,300+ employees across 5 time zones in under 24 hours.'
+				'Escalated critical issues to senior engineers, ensuring rapid resolution and minimal business disruption.'
 			],
 		},
 	];
@@ -41,7 +42,7 @@ export function ExperienceSection() {
 											{exp.title} at <span className='blue-highlight'>{exp.company}</span>
 										</CardTitle>
 										<CardDescription>
-											{exp.period}  {exp.location}
+											{exp.period} | {exp.location}
 										</CardDescription>
 									</div>
 								</div>

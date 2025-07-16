@@ -8,52 +8,45 @@ import { MotionDiv, MotionSection } from '@/components/motion-components';
 export function ProjectsSection() {
 	const projects = [
 		{
-			title: 'Notion Clone',
-			description: 'A collaborative document editor inspired by Notion, built for real-time editing and scalable deployment.',
+			title: 'WriteShare',
+			description: 'A real-time collaborative markdown editor with advanced synchronization and scalable AWS deployment.',
 			details: `
-- Deployed a Dockerized application to AWS ECS Fargate, utilizing ECR for container storage, RDS PostgreSQL for persistent data, and ElastiCache Redis for high-speed caching.
-- Optimized Redis cache layer for real-time document updates and session storage, significantly reducing database load and latency.
-- Implemented type-safe APIs with tRPC, ensuring end-to-end type safety and robust input validation, eliminating runtime errors.
-- Built a secure authentication system using NextAuth.js and Redis session management for improved performance and security.
-- Configured AWS Application Load Balancer and CloudWatch for traffic distribution and system monitoring.
-- Achieved comprehensive test coverage using Playwright for end-to-end testing and Vitest for unit/integration tests.
-- Followed AWS security best practices, including IAM roles, VPC networking, and Secrets Manager for sensitive configuration.
-- Designed for horizontal scalability and high availability, with zero-downtime deployments and automated database migrations.
+- Developed a real-time collaborative markdown editor, integrating Liveblocks for real-time editing and Yjs for CRDT-based conflict-free data synchronization.
+- Utilized Prisma ORM with PostgreSQL & Redis as a cache and datastore, holding frequently accessed data in memory and asynchronously syncing to the database, reducing load times by over 90%.
+- Designed a type-safe API layer using tRPC and Zod, ensuring data integrity and reducing runtime errors by 80%.
+- Resolved a complex infinite save loop race condition by restructuring component state ownership and isolating CRDT state updates within the editor, with dedicated backend mutations for persistence.
+- Deployed a containerized microservice architecture on AWS using Docker, ECS Fargate for orchestration, RDS PostgreSQL for persistent storage, and ElastiCache Redis for caching.
 `,
 			date: '2024',
-			tags: ['AWS ECS', 'Docker', 'tRPC', 'Redis', 'PostgreSQL', 'NextAuth.js', 'Playwright', 'Vitest', 'TypeScript', 'Next.js'],
-			github: 'https://github.com/nikitalobanov12/notion-clone',
-			live: 'https://notion-clone.nikitalobanov.com',
+			tags: ['AWS Services', 'tRPC', 'Web Sockets', 'Docker', 'Redis', 'NextAuth.js', 'Prisma', 'PostgreSQL', 'TypeScript', 'Next.js'],
+			github: 'https://github.com/nikitalobanov12/writeshare',
+			live: 'https://writeshare.nikitalobanov.com',
 		},
 		{
 			title: 'DayFlow',
-			description: 'A cross-platform productivity app for task and time management, featuring native performance and cloud sync.',
+			description: 'A goal setting and task planning application with AI-powered features, built for web and desktop with Tauri and React.',
 			details: `
-- Built a native desktop application for Windows, macOS, and Linux using Tauri 2.0 and React 19, achieving cold starts under 3s and <100ms sync latency.
-- Integrated PostgreSQL for persistent storage and Supabase for real-time syncing and offline support.
-- Automated build and deployment pipeline with GitHub Actions CI/CD for desktop releases and Vercel deployments.
-- Optimized database performance using indexes, query profiling, and efficient SQL without ORM, reducing query load and improving responsiveness.
-- Improved React component performance through optimistic UI updates, memoization, and render optimization.
-- Integrated Stripe payment processing for premium features and Google GenAI for AI-powered productivity enhancements.
-- Designed a modern, responsive UI/UX for both web and desktop, with accessibility and dark mode support.
-- Implemented robust error handling, crash reporting, and user analytics for continuous improvement.
+- Created a goal setting & task planning application with AI features, built with Tauri 2.0 for desktop and React 19 for web, serving ~180 active users from a single codebase.
+- Integrated Google Gemini AI for intelligent task scheduling, automatic time estimation, and smart task creation from natural language, leveraging user context for personalized planning.
+- Established bidirectional Google Calendar integration for task syncing and AI-aware scheduling that considers existing events.
+- Automated CI/CD pipeline with GitHub Actions for desktop releases, Vercel deployments, and CodeQL security scanning.
+- Optimized database performance using indexes and efficient SQL queries, reducing query execution time by 40-70%.
+- Enhanced React component performance through optimistic UI updates and memoization, reducing page re-renders by 99%.
 `,
 			date: '2024',
-			tags: ['React', 'Tauri', 'PostgreSQL', 'Supabase', 'GitHub Actions', 'Stripe', 'Google GenAI', 'TypeScript', 'Node.js'],
+			tags: ['React', 'Tauri', 'PostgreSQL', 'GitHub Actions', 'Node.js', 'Stripe', 'VertexAI', 'TypeScript'],
 			github: 'https://github.com/nikitalobanov12/dayflow',
 			live: 'https://dayflow-landing-page.vercel.app/',
 		},
 		{
 			title: 'Circles',
-			description: 'A full-stack social application with user groups, comments, activity feeds, and real-time updates.',
+			description: 'A full-stack social media application for community building, featuring groups, activity feeds, and scalable image delivery.',
 			details: `
-- Built with Next.js, Prisma, PostgreSQL, and Redis, deployed on Vercel for global scalability and fast edge delivery.
-- Implemented user authentication, group management, comments, and activity feeds with efficient API routes and media upload pipelines.
-- Reduced API response times by 90% by implementing Redis caching between backend and database layers.
-- Optimized database performance by resolving N+1 query problems and reducing data overfetching.
-- Integrated Cloudinary for image storage and conversion, and converted Figma designs to responsive UI with Tailwind CSS.
-- Collaborated with a team using Agile methodology across multiple sprints, with daily standups and sprint planning.
-- Designed for extensibility, supporting new features and integrations with minimal downtime.
+- Engineered a full-stack social media application with group photo sharing, personalized activity feeds, privacy controls, and granular security permissions.
+- Led a team of 2 developers in an Agile environment, using Git for version control and Jira for task management.
+- Collaborated with a design team to translate Figma prototypes into a production-ready full stack application.
+- Improved PostgreSQL performance by implementing efficient data fetching with Prisma, minimizing N+1 queries and optimizing query construction.
+- Integrated Cloudinary for image storage and built scalable image delivery with file transformations and CDNs, reducing bandwidth by 60% and image load times by 50%.
 `,
 			date: '2024',
 			tags: ['Next.js', 'Prisma', 'PostgreSQL', 'Redis', 'Vercel', 'Tailwind CSS', 'Cloudinary', 'TypeScript'],
