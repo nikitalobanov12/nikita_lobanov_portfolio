@@ -44,13 +44,13 @@ export function HeroSection() {
 				className='text-2xl md:text-3xl text-blue-600 dark:text-blue-400 font-medium'
 				variants={itemVariants}
 			>
-				Full-Stack Web Developer
+				Full Stack Engineer
 			</MotionH2>{' '}
 			<MotionP
 				className='text-lg md:text-xl max-w-[600px] text-muted-foreground mt-4 leading-relaxed'
 				variants={itemVariants}
 			>
-				I build web and desktop applications using <span className='font-semibold italic'>React</span>, <span className='font-semibold italic'>Node.js</span>, and <span className='font-semibold italic'>PostgreSQL</span>. I&apos;ve worked on real-time systems, deployed full-stack apps, and contributed to both solo and team-based projects. I focus on writing maintainable code and delivering working software.
+				I build scalable web applications using <span className='font-semibold italic'>React</span>, <span className='font-semibold italic'>Node.js</span>, and <span className='font-semibold italic'>PostgreSQL</span>. I&apos;ve optimized database performance, deployed cloud infrastructure on AWS, and led development teams. I focus on delivering high-performance solutions that scale from 0 to 300+ users.
 			</MotionP>
 			<MotionDiv
 				className='flex flex-wrap gap-4 mt-6'

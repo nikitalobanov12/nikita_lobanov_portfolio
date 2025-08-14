@@ -5,10 +5,12 @@ import { MotionSection, MotionDiv } from '@/components/motion-components';
 
 export function SkillsSection() {
 	const skills = {
-		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML & CSS', 'Rust'],
-		frameworks: ['React', 'Prisma', 'Tailwind', 'Tauri', 'Node.js', 'Express', 'NestJS'],
-		database: ['PostgreSQL', 'AWS RDS', 'AWS ElastiCache', 'Redis', 'Microservices', 'REST API', 'GraphQL', 'AWS ECS', 'AWS ECR', 'AWS VPC', 'AWS S3', 'Vercel'],
-		tools: ['Jira', 'Git', 'GitHub', 'Vite', 'Vercel', 'GitHub Actions', 'Docker', 'Vitest', 'Playwright'],
+		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS', 'Golang'],
+		frontend: ['React', 'Next.js', 'Tailwind CSS', 'React Router'],
+		backend: ['Node.js', 'Gin', 'Express.js', 'NestJS', 'REST APIs', 'gRPC', 'tRPC'],
+		database: ['PostgreSQL', 'Redis', 'Oracle Database', 'Prisma ORM'],
+		cloud: ['AWS (ECS, ECR, RDS, S3, VPC, ElastiCache)', 'Docker', 'GitHub Actions', 'Vercel'],
+		tools: ['Git', 'GitHub', 'Jira', 'Agile/Scrum', 'CI/CD', 'Database Optimization', 'Performance Monitoring'],
 	};
 
 	const containerVariants = {
@@ -61,11 +63,13 @@ export function SkillsSection() {
 					viewport={{ once: true }}
 				>
 					<Tabs defaultValue='languages' className='w-full'>
-						<TabsList className='grid grid-cols-4 mb-8 bg-muted'>
+						<TabsList className='grid grid-cols-6 mb-8 bg-muted'>
 							<TabsTrigger value='languages' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Languages</TabsTrigger>
-							<TabsTrigger value='frameworks' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Frameworks & Libraries</TabsTrigger>
-							<TabsTrigger value='database' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Database & Infrastructure</TabsTrigger>
-							<TabsTrigger value='tools' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Tools</TabsTrigger>
+							<TabsTrigger value='frontend' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Frontend</TabsTrigger>
+							<TabsTrigger value='backend' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Backend</TabsTrigger>
+							<TabsTrigger value='database' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Databases</TabsTrigger>
+							<TabsTrigger value='cloud' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Cloud & DevOps</TabsTrigger>
+							<TabsTrigger value='tools' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Tools & Methodologies</TabsTrigger>
 						</TabsList>
 
 						<TabsContent value='languages' className='mt-0'>
@@ -85,16 +89,33 @@ export function SkillsSection() {
 							</Card>
 						</TabsContent>
 
-						<TabsContent value='frameworks' className='mt-0'>
+						<TabsContent value='frontend' className='mt-0'>
 							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle>Frameworks & Libraries</CardTitle>
+									<CardTitle>Frontend</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
-										{skills.frameworks.map(framework => (
+										{skills.frontend.map(framework => (
 											<MotionDiv key={framework} variants={skillVariants} whileHover={{ scale: 1.05, rotate: -1 }} whileTap={{ scale: 0.95 }}>
 												<Badge variant='secondary' className='px-4 py-2 text-base bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'>{framework}</Badge>
+											</MotionDiv>
+										))}
+									</MotionDiv>
+								</CardContent>
+							</Card>
+						</TabsContent>
+
+						<TabsContent value='backend' className='mt-0'>
+							<Card className='enhanced-card'>
+								<CardHeader>
+									<CardTitle>Backend</CardTitle>
+								</CardHeader>
+								<CardContent>
+									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+										{skills.backend.map(backend => (
+											<MotionDiv key={backend} variants={skillVariants} whileHover={{ scale: 1.05, rotate: 1 }} whileTap={{ scale: 0.95 }}>
+												<Badge variant='secondary' className='px-4 py-2 text-base bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white dark:bg-blue-900/50 dark:text-blue-200 dark:hover:bg-blue-600 transition-all duration-200 cursor-default blue-glow'>{backend}</Badge>
 											</MotionDiv>
 										))}
 									</MotionDiv>
@@ -105,7 +126,7 @@ export function SkillsSection() {
 						<TabsContent value='database' className='mt-0'>
 							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle>Database & Infrastructure</CardTitle>
+									<CardTitle>Databases</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
@@ -119,10 +140,27 @@ export function SkillsSection() {
 							</Card>
 						</TabsContent>
 
+						<TabsContent value='cloud' className='mt-0'>
+							<Card className='enhanced-card'>
+								<CardHeader>
+									<CardTitle>Cloud & DevOps</CardTitle>
+								</CardHeader>
+								<CardContent>
+									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+										{skills.cloud.map(cloud => (
+											<MotionDiv key={cloud} variants={skillVariants} whileHover={{ scale: 1.05, rotate: -2 }} whileTap={{ scale: 0.95 }}>
+												<Badge variant='secondary' className='px-4 py-2 text-base hover:bg-primary hover:text-primary-foreground transition-colors duration-200 cursor-default'>{cloud}</Badge>
+											</MotionDiv>
+										))}
+									</MotionDiv>
+								</CardContent>
+							</Card>
+						</TabsContent>
+
 						<TabsContent value='tools' className='mt-0'>
 							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle>Tools</CardTitle>
+									<CardTitle>Tools & Methodologies</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>

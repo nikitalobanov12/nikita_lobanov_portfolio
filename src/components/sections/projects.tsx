@@ -9,47 +9,42 @@ export function ProjectsSection() {
 	const projects = [
 		{
 			title: 'WriteShare',
-			description: 'A real-time collaborative markdown editor with advanced synchronization and scalable AWS deployment.',
+			description: 'Google Docs-style collaborative markdown editor with real-time synchronization and conflict resolution.',
 			details: `
-- Developed a real-time collaborative markdown editor, integrating Liveblocks for real-time editing and Yjs for CRDT-based conflict-free data synchronization.
-- Utilized Prisma ORM with PostgreSQL & Redis as a cache and datastore, holding frequently accessed data in memory and asynchronously syncing to the database, reducing load times by over 90%.
-- Designed a type-safe API layer using tRPC and Zod, ensuring data integrity and reducing runtime errors by 80%.
-- Resolved a complex infinite save loop race condition by restructuring component state ownership and isolating CRDT state updates within the editor, with dedicated backend mutations for persistence.
-- Deployed a containerized microservice architecture on AWS using Docker, ECS Fargate for orchestration, RDS PostgreSQL for persistent storage, and ElastiCache Redis for caching.
+- Built Google Docs-style collaborative markdown editor where 10+ users can edit simultaneously without conflicts. Integrated Liveblocks WebSocket connections with Yjs's CRDT algorithm to merge concurrent edits and maintain document consistency.
+- Implemented Redis caching layer that stores frequently accessed documents in memory while PostgreSQL handles persistent storage. Used Redis pub/sub for real-time notifications and background workers to sync cache to database every 30 seconds. Reduced document load times from 2.3s to 150ms.
+- Debugged infinite save loop where React useState updates triggered CRDT sync events, which triggered more useState updates. Fixed by moving document state management entirely into Liveblocks provider and removing React state dependencies for editor content.
+- Containerized application with Docker multi-stage builds and deployed on AWS ECS Fargate with auto-scaling groups. Used RDS PostgreSQL for data persistence and ElastiCache Redis clusters for caching and session management.
 `,
 			date: '2024',
-			tags: ['AWS Services', 'tRPC', 'Web Sockets', 'Docker', 'Redis', 'NextAuth.js', 'Prisma', 'PostgreSQL', 'TypeScript', 'Next.js'],
+			tags: ['AWS Services', 'tRPC', 'Web Sockets', 'Docker', 'Redis', 'NextAuth.js'],
 			github: 'https://github.com/nikitalobanov12/writeshare',
 			live: 'https://writeshare.nikitalobanov.com',
 		},
 		{
 			title: 'DayFlow',
-			description: 'A goal setting and task planning application with AI-powered features, built for web and desktop with Tauri and React.',
+			description: 'Cross-platform task management app with AI-powered natural language processing and real-time synchronization.',
 			details: `
-- Created a goal setting & task planning application with AI features, built with Tauri 2.0 for desktop and React 19 for web, serving ~180 active users from a single codebase.
-- Integrated Google Gemini AI for intelligent task scheduling, automatic time estimation, and smart task creation from natural language, leveraging user context for personalized planning.
-- Established bidirectional Google Calendar integration for task syncing and AI-aware scheduling that considers existing events.
-- Automated CI/CD pipeline with GitHub Actions for desktop releases, Vercel deployments, and CodeQL security scanning.
-- Optimized database performance using indexes and efficient SQL queries, reducing query execution time by 40-70%.
-- Enhanced React component performance through optimistic UI updates and memoization, reducing page re-renders by 99%.
+- Built cross-platform task management app using React frontend & Tauri platform for native desktop compilation with a shared codebase between web and desktop versions. Grew from 0 to 300+ daily active users over 2 months.
+- Integrated Google Gemini AI API to parse natural language task descriptions like "plan mom's birthday party next week" into structured tasks with deadlines, priorities, and subtasks. Simplifying the task creation process for users.
+- Identified slow database queries using PostgreSQL EXPLAIN ANALYZE and added B-tree indexes on user_id, due_date, and status columns. Optimized JOIN queries between tasks and projects tables. Cut average query time from 800ms to 240ms.
+- Built Stripe payment integration system with webhook handlers for payment processing and trial management. Set up GitHub Actions CI/CD pipeline that runs tests, builds artifacts, and deploys to production on commit or merge to main.
 `,
 			date: '2024',
-			tags: ['React', 'Tauri', 'PostgreSQL', 'GitHub Actions', 'Node.js', 'Stripe', 'VertexAI', 'TypeScript'],
+			tags: ['React', 'React Router', 'Tauri', 'PostgreSQL', 'GitHub Actions', 'Node.js', 'Stripe', 'Google VertexAI'],
 			github: 'https://github.com/nikitalobanov12/dayflow',
 			live: 'https://dayflow-landing-page.vercel.app/',
 		},
 		{
 			title: 'Circles',
-			description: 'A full-stack social media application for community building, featuring groups, activity feeds, and scalable image delivery.',
+			description: 'Social platform for private community groups with photo sharing, activity feeds, and member permissions.',
 			details: `
-- Engineered a full-stack social media application with group photo sharing, personalized activity feeds, privacy controls, and granular security permissions.
-- Led a team of 2 developers in an Agile environment, using Git for version control and Jira for task management.
-- Collaborated with a design team to translate Figma prototypes into a production-ready full stack application.
-- Improved PostgreSQL performance by implementing efficient data fetching with Prisma, minimizing N+1 queries and optimizing query construction.
-- Integrated Cloudinary for image storage and built scalable image delivery with file transformations and CDNs, reducing bandwidth by 60% and image load times by 50%.
+- Built a social platform for private community groups with photo sharing, activity feeds, and member permissions. Led team of 3 developers using 1-week sprints, daily standups, and Git feature branch workflow with code reviews done by me.
+- Worked with 5 designers to create Figma mockups and convert them into pixel-perfect React components. Built responsive layouts that matched designs across desktop, tablet, and mobile breakpoints.
+- Fixed N+1 query problems where loading user feeds was making 200+ individual database calls to fetch post authors, comments, and likes. Implemented Prisma eager loading with include statements and restructured queries to use joins. Reduced query count from 200+ to 3 queries per page load.
 `,
 			date: '2024',
-			tags: ['Next.js', 'Prisma', 'PostgreSQL', 'Redis', 'Vercel', 'Tailwind CSS', 'Cloudinary', 'TypeScript'],
+			tags: ['Next.js', 'Prisma PostgreSQL', 'Redis', 'Vercel', 'Tailwind CSS'],
 			github: 'https://github.com/ILHT-IDSP/IDSP-Circle',
 			live: 'https://idsp-circle-tawny.vercel.app/',
 		},

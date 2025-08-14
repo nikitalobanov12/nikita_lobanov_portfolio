@@ -2,18 +2,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 export function ExperienceSection() {
 	const experiences = [
 		{
-			title: 'Full Stack Development Intern',
+			title: 'Software Development Intern',
 			company: 'Seaspan Corp',
-			period: 'May 2024 - Aug 2024',
+			period: 'May 2024 - Sep 2024',
 			location: 'Vancouver, BC',
 			description: [
-				'Diagnosed and resolved application errors in NetSuite and Oracle systems by analyzing system logs and employee data.',
-				'Worked with IT team to resolve the global July 2024 CrowdStrike outage, restoring access for 1,300+ employees across 5 time zones in under 24 hours.',
-				'Monitored Oracle database performance and conducted routine health checks on Linux/Windows servers and REST APIs, ensuring 99.9% uptime.',
-				'Managed employee support requests via Jira Service Desk: triaged, categorized, and prioritized 300+ tickets in 3 months.',
-				'Collaborated with database administrators to optimize Oracle queries and maintain data integrity.',
-				'Provided technical support for NetSuite ERP system, troubleshooting user access issues, data discrepancies, and workflow problems.',
-				'Escalated critical issues to senior engineers, ensuring rapid resolution and minimal business disruption.'
+				'Designed and optimized Express.js REST APIs to facilitate data exchange between Oracle ERP Cloud and Excel; Processing 1,400+ files per month & removing the need for manual data entry for accounts payable records.',
+				'Developed data visualization dashboards in React for key vessel performance indicators such as speed-over-ground, specific fuel oil consumption, and engine load, enabling precise monitoring and optimization across Seaspan\'s fleet of 227 containerships.',
+				'Served as a point of contact for employee support during the global July 2024 CrowdStrike outage, working closely with the IT Support team & guiding 80+ employees through remediation steps and confirming full functionality of their machines.',
+				'Monitored Oracle database performance and conducted routine health checks on Linux/Windows servers and REST APIs, ensuring 99.9% uptime by identifying and addressing potential bottlenecks.'
 			],
 		},
 	];
