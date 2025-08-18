@@ -5,12 +5,12 @@ import { MotionSection, MotionDiv } from '@/components/motion-components';
 
 export function SkillsSection() {
 	const skills = {
-		languages: ['JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS', 'Golang'],
-		frontend: ['React', 'Next.js', 'Tailwind CSS', 'React Router'],
-		backend: ['Node.js', 'Gin', 'Express.js', 'NestJS', 'REST APIs', 'gRPC', 'tRPC'],
-		database: ['PostgreSQL', 'Redis', 'Oracle Database', 'Prisma ORM'],
-		cloud: ['AWS (ECS, ECR, RDS, S3, VPC, ElastiCache)', 'Docker', 'GitHub Actions', 'Vercel'],
-		tools: ['Git', 'GitHub', 'Jira', 'Agile/Scrum', 'CI/CD', 'Database Optimization', 'Performance Monitoring'],
+		languages: ['JavaScript', 'TypeScript', 'SQL', 'Golang', 'C++', 'Java', 'Python', 'Lua', 'Bash'],
+		frontend: ['HTML', 'CSS', 'React', 'Next.js', 'Tailwind CSS', 'React Router', 'Shadcn', 'Sass', 'EJS', 'Angular'],
+		backend: ['Node.js', 'Gin', 'Express.js', 'NestJS', 'REST APIs', 'gRPC', 'tRPC', 'GraphQL', 'Chi', 'Spring Boot', 'Flask', 'Microservices'],
+		database: ['PostgreSQL', 'Redis', 'Oracle Database', 'Prisma ORM', 'MongoDB', 'Drizzle'],
+		cloud: ['AWS (ECS, ECR, RDS, S3, VPC, ElastiCache)', 'Docker', 'GitHub Actions', 'Vercel', 'Linux', 'Railway', 'Cloudflare'],
+		tools: ['Git', 'GitHub', 'Jira', 'Agile/Scrum', 'CI/CD', 'Database Optimization', 'Performance Monitoring', 'CDN', 'SEO'],
 	};
 
 	const containerVariants = {

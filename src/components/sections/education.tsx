@@ -14,13 +14,13 @@ export function EducationSection() {
 				<CardHeader>
 					<div className='flex flex-col md:flex-row md:items-center md:justify-between'>
 						<div>
-							<CardTitle className=''>Bachelors of Science in Computer Science</CardTitle>
+							<CardTitle className=''>Bachelor of Science in Computer Science</CardTitle>
 							<CardDescription>
-								<span className='blue-highlight'>British Columbia Institute of Technology</span> — <span className='blue-highlight'>Full-Stack Web Development</span>
+								<span className='blue-highlight'>British Columbia Institute of Technology</span> — <span className='blue-highlight'>Full-Stack Web Development Specialization</span>
 							</CardDescription>
 						</div>
 						<div className='mt-2 md:mt-0'>
-							<span className='text-sm text-muted-foreground'>Vancouver, BC | Expected April 2026</span>
+							<span className='text-sm text-muted-foreground'>Vancouver, BC | Expected May 2026</span>
 						</div>
 					</div>
 				</CardHeader>
@@ -28,7 +28,7 @@ export function EducationSection() {
 					<div className='space-y-4'>
 						<div>
 							<h4 className='font-medium mb-2'>Relevant Courses</h4>
-							<p className='text-sm text-muted-foreground'>Data Structures & Algorithms, Web Database Technologies, Operating Systems, Object-Oriented Programming, JavaScript Frameworks and Server, Mathematics for Computing, Agile Software Development, Web Administration.</p>
+							<p className='text-sm text-muted-foreground'>Data Structures & Algorithms, Web Database Technologies, Operating Systems, Object-Oriented Programming, JavaScript Frameworks and Server, Mathematics for Computing, Web Administration, Unix Tools and Scripting, Agile Development.</p>
 						</div>
 					</div>
 				</CardContent>

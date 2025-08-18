@@ -3,14 +3,54 @@ export function ExperienceSection() {
 	const experiences = [
 		{
 			title: 'Software Development Intern',
-			company: 'Seaspan Corp',
-			period: 'May 2024 - Sep 2024',
+			company: 'Seaspan Corporation',
+			period: 'May 2024 - August 2024',
 			location: 'Vancouver, BC',
 			description: [
-				'Designed and optimized Express.js REST APIs to facilitate data exchange between Oracle ERP Cloud and Excel; Processing 1,400+ files per month & removing the need for manual data entry for accounts payable records.',
-				'Developed data visualization dashboards in React for key vessel performance indicators such as speed-over-ground, specific fuel oil consumption, and engine load, enabling precise monitoring and optimization across Seaspan\'s fleet of 227 containerships.',
-				'Served as a point of contact for employee support during the global July 2024 CrowdStrike outage, working closely with the IT Support team & guiding 80+ employees through remediation steps and confirming full functionality of their machines.',
-				'Monitored Oracle database performance and conducted routine health checks on Linux/Windows servers and REST APIs, ensuring 99.9% uptime by identifying and addressing potential bottlenecks.'
+				'Developed Spring Boot REST APIs that automated data processing between Oracle ERP and Excel for accounts payable, eliminating 160+ hours of monthly manual work.',
+				'Built React dashboards for monitoring vessel performance metrics across their 227-ship fleet, enabling precise monitoring and optimization of key indicators.',
+				'Helped coordinate IT support during the global July 2024 CrowdStrike outage, guiding 80+ employees through system recovery and achieving 100% functionality restoration.',
+				'Monitored Oracle database performance and conducted routine health checks on Linux/Windows servers and REST APIs to ensure optimal system performance.'
+			],
+		},
+		{
+			title: 'Full Stack Web Developer',
+			company: 'Affistash',
+			period: 'March 2023 - April 2024',
+			location: 'Remote',
+			description: [
+				'Built frontend interfaces for Affistash, an AI platform that helps brands find affiliate partners automatically.',
+				'Developed the main partner discovery dashboard in React, allowing brands to see detailed analytics about potential affiliates including their traffic data and niche focus.',
+				'Streamlined the brands affiliate recruitment from a weeks-long manual process to finding hundreds of quality partners in minutes.'
+			],
+		},
+		{
+			title: 'Information Technology Intern',
+			company: 'DDS Wireless',
+			period: 'June 2018 - August 2020',
+			location: 'Richmond, BC',
+			description: [
+				'Worked in the IT department on troubleshooting hardware problems and technical support tasks, including Windows OS installations for new computers & corrupted computers.',
+				'Managed ethernet cable routing and network infrastructure setup, ensuring reliable connectivity across the organization.',
+				'Performed comprehensive hardware diagnostics and component-level troubleshooting by testing RAM modules, identifying faulty motherboard slots, and validating functionality of refurbished equipment.'
+			],
+		},
+		{
+			title: 'Cook - The Victor',
+			company: 'Blau & Associates',
+			period: 'June 2024 - Present',
+			location: 'Vancouver, BC',
+			description: [
+				'Working as a professional cook at The Victor restaurant, maintaining high-quality food preparation standards and contributing to kitchen operations.'
+			],
+		},
+		{
+			title: 'Line Cook',
+			company: 'Browns Socialhouse - Premier Restaurant Group',
+			period: 'May 2022 - July 2023',
+			location: 'Richmond, BC',
+			description: [
+				'Worked as a line cook in a fast-paced restaurant environment, maintaining food quality standards and contributing to efficient kitchen operations.'
 			],
 		},
 	];
