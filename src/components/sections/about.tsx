@@ -7,15 +7,19 @@ export function AboutSection() {
 			<div className='space-y-6'>
 				<div className='space-y-2'>
 					<h2 className='text-3xl font-bold tracking-tight section-heading'>About Me</h2>
-					<p className='text-muted-foreground'>I am a senior computer science student at BCIT specializing in fullstack web development with hands-on experience building scalable applications and system integrations. Currently seeking backend or full-stack development roles where I can apply my technical skills in modern web technologies and continue learning.</p>
+					<p className='text-muted-foreground'>I&apos;m a senior computer science student at BCIT specializing in full-stack web development. I build scalable applications and system integrations using TypeScript, Go, PostgreSQL, and AWS.</p>
 				</div>
 				<div className='prose dark:prose-invert'>
 					<p>
-						I have practical experience developing REST APIs, building high-performance React frontends, and real-time systems, along with working on AI-powered applications and complex database systems. My expertise spans full-stack development, cloud infrastructure, and database performance optimization. I&apos;ve led development teams, optimized systems that process 1,400+ files per month, and built applications serving hundreds of daily active users.
+						My experience includes developing APIs with Go, Java, and Node.js, building React frontends, and working with real-time systems using WebSockets. I&apos;ve contributed to AI-powered applications and handled database optimization projects. I&apos;ve architected cross-platform applications using Tauri for desktop compilation and optimized database queries for significant performance improvements.
 					</p>
 					<br />
 					<p>
-						Currently pursuing a <span className='blue-highlight'>Bachelor of Science in Computer Science</span> with a concentration in <span className='blue-highlight'>Full-Stack Web Development</span> at <span className='blue-highlight'>British Columbia Institute of Technology</span> (expected May 2026). My coursework includes Data Structures & Algorithms, Web Database Technologies, Operating Systems, Object-Oriented Programming, JavaScript Frameworks and Server, Mathematics for Computing, Web Administration, Unix Tools and Scripting, and Agile Development.
+						My recent projects include collaborative markdown editors with real-time synchronization and task management applications with AI integration for natural language processing. I work with containerization using Docker, CI/CD pipelines with GitHub Actions, and AWS services including ECS, RDS, Lambda, and ElastiCache. I&apos;ve implemented caching strategies with Redis and deployed applications using auto-scaling infrastructure on AWS.
+					</p>
+					<br />
+					<p>
+						Currently seeking backend or full-stack development opportunities where I can leverage my technical skills and continue growing in modern web technologies and distributed systems. Open to connecting with fellow developers and exploring opportunities in software engineering.
 					</p>
 				</div>
 			</div>
