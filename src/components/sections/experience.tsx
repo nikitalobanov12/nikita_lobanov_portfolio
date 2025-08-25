@@ -44,15 +44,6 @@ export function ExperienceSection() {
 				'Working as a professional cook at The Victor restaurant, maintaining high-quality food preparation standards and contributing to kitchen operations.'
 			],
 		},
-		{
-			title: 'Line Cook',
-			company: 'Browns Socialhouse - Premier Restaurant Group',
-			period: 'May 2022 - July 2023',
-			location: 'Richmond, BC',
-			description: [
-				'Worked as a line cook in a fast-paced restaurant environment, maintaining food quality standards and contributing to efficient kitchen operations.'
-			],
-		},
 	];
 
 	return (

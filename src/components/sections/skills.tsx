@@ -63,13 +63,13 @@ export function SkillsSection() {
 					viewport={{ once: true }}
 				>
 					<Tabs defaultValue='languages' className='w-full'>
-						<TabsList className='grid grid-cols-6 mb-8 bg-muted'>
-							<TabsTrigger value='languages' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Languages</TabsTrigger>
-							<TabsTrigger value='frontend' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Frontend</TabsTrigger>
-							<TabsTrigger value='backend' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Backend</TabsTrigger>
-							<TabsTrigger value='database' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Databases</TabsTrigger>
-							<TabsTrigger value='cloud' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Cloud & DevOps</TabsTrigger>
-							<TabsTrigger value='tools' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium'>Tools & Methodologies</TabsTrigger>
+						<TabsList className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 mb-8 bg-muted gap-1 h-auto p-1'>
+							<TabsTrigger value='languages' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Languages</TabsTrigger>
+							<TabsTrigger value='frontend' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Frontend</TabsTrigger>
+							<TabsTrigger value='backend' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Backend</TabsTrigger>
+							<TabsTrigger value='database' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Databases</TabsTrigger>
+							<TabsTrigger value='cloud' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Cloud & DevOps</TabsTrigger>
+							<TabsTrigger value='tools' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Tools & Methodologies</TabsTrigger>
 						</TabsList>
 
 						<TabsContent value='languages' className='mt-0'>

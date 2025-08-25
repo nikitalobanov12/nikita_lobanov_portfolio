@@ -133,7 +133,7 @@ export function HeroSection() {
         </MotionDiv>
       </div>
       <MotionDiv
-        className="w-full md:w-1/2 flex justify-center relative h-96 md:h-[600px]"
+        className="w-full md:w-1/2 flex justify-center relative h-80 sm:h-96 md:h-[600px] max-w-sm md:max-w-none mx-auto"
         variants={itemVariants}
       >
         {/* Main large bubble */}
@@ -151,7 +151,7 @@ export function HeroSection() {
             ease: "easeInOut",
           }}
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80">
+          <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-80 md:h-80">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full blur-md opacity-30 animate-pulse"></div>
             <Image
               src="/nikita.jpg"
@@ -166,7 +166,7 @@ export function HeroSection() {
         {/* Secondary bubble - top left */}
         <MotionDiv
           className="absolute z-5"
-          style={{ top: "0%", left: "0%" }}
+          style={{ top: "5%", left: "10%" }}
           animate={{
             y: [0, -15, 0],
             x: [0, -5, 0],
@@ -180,7 +180,7 @@ export function HeroSection() {
           }}
           whileHover={{ scale: 1.1 }}
         >
-          <div className="relative w-40 h-40 md:w-52 md:h-52">
+          <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-52 md:h-52">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full blur-md opacity-30 animate-pulse"></div>
             <Image
               src="/nikita-2.jpg"
@@ -194,7 +194,7 @@ export function HeroSection() {
         {/* Third bubble - bottom left */}
         <MotionDiv
           className="absolute z-5"
-          style={{ bottom: "10%", left: "5%" }}
+          style={{ bottom: "15%", left: "15%" }}
           animate={{
             y: [0, 12, 0],
             x: [0, -8, 0],
@@ -208,7 +208,7 @@ export function HeroSection() {
           }}
           whileHover={{ scale: 1.1 }}
         >
-          <div className="relative w-36 h-36 md:w-48 md:h-48">
+          <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-48 md:h-48">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-300 to-blue-600 rounded-full blur-md opacity-30 animate-pulse"></div>
             <Image
               src="/nikita-3.jpg"
@@ -221,8 +221,8 @@ export function HeroSection() {
 
         {/* Floating gradient orbs for extra ambiance */}
         <MotionDiv
-          className="absolute w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-full blur-xl"
-          style={{ top: "60%", right: "25%" }}
+          className="absolute w-8 h-8 md:w-16 md:h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-full blur-xl"
+          style={{ top: "60%", right: "20%" }}
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -234,8 +234,8 @@ export function HeroSection() {
           }}
         />
         <MotionDiv
-          className="absolute w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-lg"
-          style={{ top: "25%", left: "20%" }}
+          className="absolute w-6 h-6 md:w-12 md:h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-lg"
+          style={{ top: "25%", left: "25%" }}
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.2, 0.5, 0.2],
