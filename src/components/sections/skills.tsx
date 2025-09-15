@@ -5,12 +5,12 @@ import { MotionSection, MotionDiv } from '@/components/motion-components';
 
 export function SkillsSection() {
 	const skills = {
-		languages: ['JavaScript', 'TypeScript', 'SQL', 'Golang', 'C++', 'Java', 'Python', 'Lua', 'Bash'],
-		frontend: ['HTML', 'CSS', 'React', 'Next.js', 'Tailwind CSS', 'React Router', 'Shadcn', 'Sass', 'EJS', 'Angular'],
-		backend: ['Node.js', 'Gin', 'Express.js', 'NestJS', 'REST APIs', 'gRPC', 'tRPC', 'GraphQL', 'Chi', 'Spring Boot', 'Flask', 'Microservices'],
-		database: ['PostgreSQL', 'Redis', 'Oracle Database', 'Prisma ORM', 'MongoDB', 'Drizzle'],
-		cloud: ['AWS (ECS, ECR, RDS, S3, VPC, ElastiCache)', 'Docker', 'GitHub Actions', 'Vercel', 'Linux', 'Railway', 'Cloudflare'],
-		tools: ['Git', 'GitHub', 'Jira', 'Agile/Scrum', 'CI/CD', 'Database Optimization', 'Performance Monitoring', 'CDN', 'SEO'],
+		languages: ['TypeScript', 'Go', 'Rust', 'SQL', 'JavaScript', 'Java', 'Python'],
+		frontend: ['React', 'Next.js', 'Tailwind CSS', 'Tauri', 'Shadcn/ui', 'Framer Motion'],
+		backend: ['Go (Gin, Chi)', 'Node.js', 'gRPC', 'WebSockets', 'REST APIs', 'Microservices', 'Spring Boot'],
+		database: ['PostgreSQL', 'Redis', 'Prisma ORM', 'Database Optimization', 'Query Performance'],
+		cloud: ['AWS (ECS, RDS, S3, Lambda)', 'Docker', 'GitHub Actions', 'Vercel', 'Linux'],
+		exploring: ['CRDTs (Yjs)', 'Distributed Systems', 'AI Integration', 'Systems Programming', 'Performance Optimization', 'Real-time Collaboration'],
 	};
 
 	const containerVariants = {
@@ -52,8 +52,8 @@ export function SkillsSection() {
 					transition={{ duration: 0.5 }}
 					viewport={{ once: true }}
 				>
-					<h2 className='text-3xl font-bold tracking-tight '>Skills</h2>
-					<p className='text-muted-foreground'>Technologies and tools I work with</p>
+					<h2 className='text-3xl font-bold tracking-tight '>Current Stack</h2>
+					<p className='text-muted-foreground'>What I&apos;m using right now and actively exploring</p>
 				</MotionDiv>
 
 				<MotionDiv
@@ -67,15 +67,15 @@ export function SkillsSection() {
 							<TabsTrigger value='languages' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Languages</TabsTrigger>
 							<TabsTrigger value='frontend' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Frontend</TabsTrigger>
 							<TabsTrigger value='backend' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Backend</TabsTrigger>
-							<TabsTrigger value='database' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Databases</TabsTrigger>
-							<TabsTrigger value='cloud' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Cloud & DevOps</TabsTrigger>
-							<TabsTrigger value='tools' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Tools & Methodologies</TabsTrigger>
+							<TabsTrigger value='database' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Data</TabsTrigger>
+							<TabsTrigger value='cloud' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Infrastructure</TabsTrigger>
+							<TabsTrigger value='exploring' className='data-[state=active]:bg-blue-500 data-[state=active]:text-white text-foreground font-medium text-xs sm:text-sm px-2 sm:px-3 py-2'>Exploring</TabsTrigger>
 						</TabsList>
 
 						<TabsContent value='languages' className='mt-0'>
 							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle>Programming Languages</CardTitle>
+									<CardTitle>Daily Drivers</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
@@ -126,7 +126,7 @@ export function SkillsSection() {
 						<TabsContent value='database' className='mt-0'>
 							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle>Databases</CardTitle>
+									<CardTitle>Data & Performance</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
@@ -143,7 +143,7 @@ export function SkillsSection() {
 						<TabsContent value='cloud' className='mt-0'>
 							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle>Cloud & DevOps</CardTitle>
+									<CardTitle>Infrastructure & Deployment</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
@@ -157,16 +157,16 @@ export function SkillsSection() {
 							</Card>
 						</TabsContent>
 
-						<TabsContent value='tools' className='mt-0'>
+						<TabsContent value='exploring' className='mt-0'>
 							<Card className='enhanced-card'>
 								<CardHeader>
-									<CardTitle>Tools & Methodologies</CardTitle>
+									<CardTitle>Currently Exploring</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<MotionDiv className='flex flex-wrap gap-2' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }}>
-										{skills.tools.map(tool => (
-											<MotionDiv key={tool} variants={skillVariants} whileHover={{ scale: 1.05, rotate: 2 }} whileTap={{ scale: 0.95 }}>
-												<Badge variant='secondary' className='px-4 py-2 text-base hover:bg-primary hover:text-primary-foreground transition-colors duration-200 cursor-default'>{tool}</Badge>
+										{skills.exploring.map(topic => (
+											<MotionDiv key={topic} variants={skillVariants} whileHover={{ scale: 1.05, rotate: 2 }} whileTap={{ scale: 0.95 }}>
+												<Badge variant='secondary' className='px-4 py-2 text-base hover:bg-primary hover:text-primary-foreground transition-colors duration-200 cursor-default'>{topic}</Badge>
 											</MotionDiv>
 										))}
 									</MotionDiv>

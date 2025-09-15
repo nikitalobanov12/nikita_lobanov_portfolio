@@ -24,12 +24,53 @@ import {
 export function ProjectsSection() {
   const projects = [
     {
+      title: "WriteShare",
+      description:
+        "A real-time collaborative markdown editor that actually works. Built to explore the fascinating world of Conflict-free Replicated Data Types (CRDTs) and see how far I could push WebSocket performance with Go microservices.",
+      detailsTitle: "Real-Time Collaboration with CRDTs and Go Microservices",
+      detailsDescription:
+        "What started as curiosity about how Google Docs handles concurrent editing turned into a deep dive into distributed systems. The result is a markdown editor that can handle 25+ simultaneous editors with sub-180ms latency.",
+      keyFeatures: [
+        "Yjs CRDT implementation for true conflict-free collaborative editing—watching multiple cursors dance around the same document never gets old",
+        "Go microservices architecture with gRPC for document operations and WebSocket fanout—because sometimes you need the performance that only Go can provide",
+        "Redis caching layer with smart invalidation strategies to keep frequently accessed documents lightning fast",
+        "PostgreSQL with optimized schema design and connection pooling—learned a lot about query planning during this one",
+        "Real-time presence indicators showing who's editing what and where—the small details that make collaboration feel human",
+        "Markdown-aware editing with syntax highlighting and live preview—because writing should be enjoyable",
+        "Docker containerization with multi-stage builds optimized for both development speed and production efficiency"
+      ],
+      technicalHighlights: [
+        "Achieved sub-180ms p95 edit latency with 25+ concurrent editors by implementing efficient CRDT operations over WebSockets",
+        "Built a Go microservices backend that handles document state, user presence, and real-time synchronization using gRPC",
+        "Designed Redis caching strategies that reduced database load by 70% while maintaining consistency across distributed editors",
+        "Implemented PostgreSQL optimizations including proper indexing and connection pooling for document storage at scale",
+        "Created comprehensive observability with structured logging and metrics to understand system behavior under load",
+        "Used ECS deployment with auto-scaling to handle traffic spikes and ensure reliability in production",
+        "Solved the classic 'save vs sync' problem by separating document content state from metadata management"
+      ],
+      tags: [
+        "Go",
+        "gRPC", 
+        "WebSockets",
+        "Yjs CRDT",
+        "Next.js 14",
+        "TypeScript",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "AWS ECS",
+        "Real-time Collaboration"
+      ],
+      github: "https://github.com/nikitalobanov12/WriteShare",
+      live: "https://writeshare.nikitalobanov.com",
+    },
+    {
       title: "DayFlow",
       description:
-        "High-performance hybrid task manager built with Tauri 2.0, React 19, and TypeScript. Features real-time drag-and-drop kanban boards, AI-powered scheduling and task creation, comprehensive goals tracking, advanced sprint modes with dynamic window management, and Google Calendar integration.",
-      detailsTitle: "AI-Powered Cross-Platform Task Management System",
+        "My personal productivity system that grew into something 300+ people use daily. Started as frustration with existing task managers and evolved into an exploration of AI-assisted productivity, cross-platform development with Tauri, and what happens when you really optimize PostgreSQL.",
+      detailsTitle: "From Personal Tool to 300+ Daily Active Users",
       detailsDescription:
-        "A sophisticated task management application that works as both a native desktop app and modern web app with the same codebase. Features advanced AI integration, real-time collaboration, and comprehensive productivity tools.",
+        "What began as scratching my own productivity itch turned into a deep dive into AI integration, cross-platform architecture, and scaling from zero to hundreds of users. The most rewarding part was watching users adapt the tool to workflows I never imagined.",
       keyFeatures: [
         "AI-Enhanced Productivity Suite with Google Gemini AI for intelligent task scheduling and natural language task creation",
         "Cross-platform architecture using Tauri 2.0 for native desktop compilation with shared React 19 codebase",
@@ -210,11 +251,11 @@ export function ProjectsSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-bold tracking-tight section-heading">
-            Projects
+            Recent Explorations
           </h2>
           <p className="text-muted-foreground">
-            A showcase of my recent development work featuring full-stack
-            applications, microservices, and modern web technologies
+            Things I&apos;ve built to explore interesting technical problems, learn new technologies, 
+            and scratch my own itches
           </p>
         </MotionDiv>
         <div className="grid gap-6 md:grid-cols-2">
