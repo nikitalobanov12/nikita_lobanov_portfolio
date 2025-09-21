@@ -1,0 +1,47 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import ThemeToggle from '@/components/theme-toggle.tsx';
+import { getCollection, getEntryBySlug } from 'astro:content';
+
+const { slug } = Astro.params;
+const entry = slug ? await getEntryBySlug('notes', slug) : null;
+
+if (!entry) {
+	throw new Error(`Note not found for slug "${slug ?? ''}"`);
+}
+
+const { Content } = await entry.render();
+
+export async function getStaticPaths() {
+	const entries = await getCollection('notes');
+	return entries.map(note => ({ params: { slug: note.slug } }));
+}
+---
+<Layout title={`${entry.data.title} · Notes`} description={entry.data.description}>
+	<header class='sticky top-0 z-30 border-b border-border/60 bg-background/80 backdrop-blur'>
+		<div class='container flex items-center justify-between py-4 text-sm'>
+			<a href='/notes' class='flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground'>
+				<img src='/logo.svg' alt='Nikita Lobanov logo' class='h-6 w-6' loading='lazy' />
+				<span class='font-mono text-xs tracking-[0.3em]'>NOTES</span>
+			</a>
+			<ThemeToggle client:load />
+		</div>
+	</header>
+	<main class='container space-y-6 py-16'>
+		<div class='space-y-2'>
+			<p class='text-xs uppercase tracking-[0.18em] text-muted-foreground/70'>{entry.data.publishDate.toLocaleDateString()}</p>
+			<h1 class='text-3xl font-mono tracking-tight md:text-4xl'>{entry.data.title}</h1>
+			<p class='text-muted-foreground'>{entry.data.description}</p>
+			{entry.data.tags && entry.data.tags.length > 0 && (
+				<ul class='flex flex-wrap gap-2 pt-2 text-xs text-muted-foreground'>
+					{entry.data.tags.map(tag => (
+						<li key={tag} class='rounded-full border border-border/60 px-3 py-1'>#{tag}</li>
+					))}
+				</ul>
+			)}
+		</div>
+		<article class='space-y-4 text-sm leading-relaxed text-muted-foreground'>
+			<Content />
+		</article>
+	</main>
+</Layout>

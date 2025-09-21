@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 220 13% 97%;
+		--foreground: 220 18% 12%;
+		--card: 220 13% 95%;
+		--card-foreground: 220 18% 15%;
+		--popover: 220 13% 95%;
+		--popover-foreground: 220 18% 15%;
+		--primary: 198 93% 52%;
+		--primary-foreground: 210 40% 98%;
+		--secondary: 220 10% 88%;
+		--secondary-foreground: 220 18% 12%;
+		--muted: 215 12% 85%;
+		--muted-foreground: 220 14% 35%;
+		--accent: 198 93% 52%;
+		--accent-foreground: 210 40% 98%;
+		--destructive: 0 72% 50%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 220 12% 82%;
+		--input: 220 12% 78%;
+		--ring: 198 93% 52%;
+		--radius: 0.6rem;
+	}
+
+	.dark {
+		--background: 223 47% 5%;
+		--foreground: 213 31% 91%;
+		--card: 226 44% 10%;
+		--card-foreground: 210 20% 96%;
+		--popover: 226 44% 10%;
+		--popover-foreground: 210 20% 96%;
+		--primary: 198 93% 62%;
+		--primary-foreground: 223 47% 5%;
+		--secondary: 225 22% 17%;
+		--secondary-foreground: 210 20% 96%;
+		--muted: 228 17% 20%;
+		--muted-foreground: 215 18% 75%;
+		--accent: 198 93% 62%;
+		--accent-foreground: 223 47% 5%;
+		--destructive: 355 66% 53%;
+		--destructive-foreground: 223 47% 5%;
+		--border: 221 19% 23%;
+		--input: 221 19% 23%;
+		--ring: 198 93% 62%;
+	}
+
+	* {
+		@apply border-border;
+	}
+
+	html,
+	body {
+		min-height: 100%;
+	}
+
+	body {
+		@apply bg-background text-foreground font-sans antialiased;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply font-mono tracking-tight text-foreground;
+	}
+
+	::selection {
+		background-color: hsl(var(--primary) / 0.2);
+		color: hsl(var(--primary-foreground));
+	}
+
+	article h1,
+	article h2,
+	article h3 {
+		@apply font-mono text-foreground;
+	}
+
+	article h1 {
+		@apply text-3xl;
+	}
+
+	article h2 {
+		@apply text-2xl mt-6;
+	}
+
+	article h3 {
+		@apply text-xl mt-4;
+	}
+
+	article p,
+	article ul,
+	article ol {
+		@apply text-muted-foreground;
+	}
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}
