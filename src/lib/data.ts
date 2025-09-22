@@ -1,6 +1,6 @@
 export const about = {
   summary:
-    "CS student at BCIT, graduating 2026. I like to build full-stack applications end to end, and being able to spot a bottleneck in my life and build an app to handle it has shaped me as an engineer. I love learning, whether it’s about cooking, cars, sports, or Neovim plugins, I pick up something new every day. ",
+    "CS student at BCIT, graduating 2026. I like to build full-stack applications end to end, and being able to spot a bottleneck in my life and build an app to handle it has shaped me as an engineer. I love learning, whether it’s about cooking, cars, health, sports, or Neovim plugins, I pick up something new every day.  ",
   tools: ["WSL2 + Fedora", "Neovim", "tmux", "Alacritty"],
   currently: [
     "Building an app to support tradespeople from underrepresented groups grow their careers",
