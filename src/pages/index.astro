@@ -12,6 +12,7 @@ const navItems = [
 	{ id: 'stack', label: 'Stack' },
 	{ id: 'contact', label: 'Contact' },
 ];
+const stackIconUrl = `https://skillicons.dev/icons?i=${stack.icons.join(',')}&perline=10`;
 ---
 <Layout title='Nikita Lobanov · Go & TypeScript Engineer'>
 	<header class='sticky top-0 z-30 border-b border-border/60 bg-background/80 backdrop-blur'>
@@ -71,7 +72,7 @@ const navItems = [
 							{about.tools.map(tool => (
 								<li key={tool} class='rounded-md border border-border/60 px-3 py-1'>{tool}</li>
 							))}
-						</ul>
+           	</ul>
 					</div>
 					<div>
 						<p class='text-xs uppercase tracking-[0.2em] text-muted-foreground/70'>Currently</p>
@@ -149,28 +150,29 @@ const navItems = [
 			<div class='container grid gap-8 py-20 md:grid-cols-[1fr_1fr]'>
 				<div class='space-y-4'>
 					<h2 class='text-3xl font-mono tracking-tight md:text-4xl'>Current stack</h2>
+					<p class='text-sm text-muted-foreground'>Tools I lean on daily to ship reliable software across the stack.</p>
+					<div class='rounded-md border border-border/60 bg-background/70 p-4'>
+						<img
+							src={stackIconUrl}
+							alt='Technologies Nikita works with'
+							class='w-full max-w-[520px]'
+							loading='lazy'
+						/>
+					</div>
 				</div>
 				<div class='grid gap-5 text-sm text-muted-foreground'>
-					<div>
-						<p class='text-xs uppercase tracking-[0.2em] text-muted-foreground/70'>Daily drivers</p>
-						<p class='mt-2 text-foreground'>{stack.dailyDrivers.join(' · ')}</p>
-					</div>
-					<div>
-						<p class='text-xs uppercase tracking-[0.2em] text-muted-foreground/70'>Frontend</p>
-						<p class='mt-2'>{stack.frontend}</p>
-					</div>
-					<div>
-						<p class='text-xs uppercase tracking-[0.2em] text-muted-foreground/70'>Backend</p>
-						<p class='mt-2'>{stack.backend}</p>
-					</div>
-					<div>
-						<p class='text-xs uppercase tracking-[0.2em] text-muted-foreground/70'>Infra</p>
-						<p class='mt-2'>{stack.infra.join(' · ')}</p>
-					</div>
-					<div>
-						<p class='text-xs uppercase tracking-[0.2em] text-muted-foreground/70'>Exploring</p>
-						<p class='mt-2'>{stack.exploring.join(' · ')}</p>
-					</div>
+					{stack.categories.map(category => (
+						<div key={category.label} class='rounded-md border border-border/60 bg-background/70 px-4 py-3'>
+							<p class='text-xs uppercase tracking-[0.2em] text-muted-foreground/70'>{category.label}</p>
+							<p class='mt-2 text-foreground'>{category.items.join(' · ')}</p>
+						</div>
+					))}
+					{stack.exploring.length > 0 && (
+						<div class='rounded-md border border-border/60 bg-background/70 px-4 py-3'>
+							<p class='text-xs uppercase tracking-[0.2em] text-muted-foreground/70'>Exploring</p>
+							<p class='mt-2'>{stack.exploring.join(' · ')}</p>
+						</div>
+					)}
 				</div>
 			</div>
 		</section>

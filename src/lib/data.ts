@@ -1,10 +1,10 @@
 export const about = {
   summary:
     "CS student at BCIT, Graduating in 2026. I like to build full-stack applications end to end. Being able to spot a bottleneck in my life and build an app to handle it has shaped me as an engineer. I enjoy creating tools that make everyday work smoother and reliable. I value clean easy to use tools & enjoy the satisfaction of seeing progress & getting good at something. I love to learn, whether it's about programming, cooking, cars, health, sports, or Neovim, & that same curiosity is what pushes me to keep improving as a developer.",
-  tools: ["WSL2 + Fedora", "Neovim", "tmux", "Alacritty"],
+  tools: ["Arch(btw) Linux", "Hyprland", "Neovim", "tmux", "Ghostty"],
   currently: [
     "Building an app to support tradespeople from underrepresented groups grow their careers",
-    "Reading Operating Systems: Three Easy Pieces",
+    "Learning about Operating Systems",
     "Perfecting my pan sauce recipe",
   ],
 };
@@ -104,11 +104,54 @@ export const experience = [
 ];
 
 export const stack = {
-  dailyDrivers: ["Go", "TypeScript", "PostgreSQL", "Python"],
-  frontend: "React + Tailwind + shadcn/ui",
-  backend:
-    "Go for reliability, TypeScript when flexibility matters, Python for niche ai integrations.",
-  infra: ["AWS Amplify", "RDS", "S3", "Lambda", "Terraform", "Docker"],
+  icons: [
+    "go",
+    "ts",
+    "cpp",
+    "python",
+    "neovim",
+    "docker",
+    "postgres",
+    "redis",
+    "arch",
+    "terraform",
+    "aws",
+    "bash",
+    "github",
+    "linux",
+    "nextjs",
+    "nodejs",
+    "tailwind",
+    "vitest",
+    "htmx",
+  ],
+  categories: [
+    {
+      label: "Languages & Frameworks",
+      items: [
+        "Go",
+        "TypeScript",
+        "C++",
+        "Python",
+        "Next.js",
+        "HTMX",
+        "Node.js",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      label: "Data & Infrastructure",
+      items: ["PostgreSQL", "Redis", "Docker", "Terraform", "AWS"],
+    },
+    {
+      label: "Workflow & Tooling",
+      items: ["Arch Linux", "Linux", "Neovim", "Bash", "GitHub"],
+    },
+    {
+      label: "Testing",
+      items: ["Vitest"],
+    },
+  ],
   exploring: [
     "Operating Systems",
     "Hugging Face AI tasks",
