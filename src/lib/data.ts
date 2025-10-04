@@ -1,11 +1,11 @@
 export const about = {
   summary:
-    "CS student at BCIT, Graduating in 2026. I like to build full-stack applications end to end. Being able to spot a bottleneck in my life and build an app to handle it has shaped me as an engineer. I enjoy creating tools that make everyday work smoother and reliable. I value clean easy to use tools & enjoy the satisfaction of seeing progress & getting good at something. I love to learn, whether it's about programming, cooking, cars, health, sports, or Neovim, & that same curiosity is what pushes me to keep improving as a developer.",
+    "I'm a 20 year old CS undergrad student from Vancouver, BC. I love to build things and solve problems for myself, sometimes it helps others too.\n\nI've built and deployed full stack applications end to end and am comfortable with the process, I mainly like to work with Golang or the TypeScript ecosystem & my favorite database to use is postgres.\n\nI built my first PC when I was 10 years old which has helped me explore my curiousity with computers and get familiar with them, I'm comfortable with Linux and I live in the command line.\n\nCurrently I'm working on deepening my understanding on operating systems & relating that to distributed systems",
   tools: ["Arch(btw) Linux", "Hyprland", "Neovim", "tmux", "Ghostty"],
   currently: [
-    "Building an app to support tradespeople from underrepresented groups grow their careers",
-    "Learning about Operating Systems",
-    "Perfecting my pan sauce recipe",
+    "Building tba",
+    "Reading the book Operating Systems: Three Easy Pieces",
+    "Editing my dotfiles",
   ],
 };
 
