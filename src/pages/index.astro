@@ -5,12 +5,8 @@ import HeroSlideshow from '@/components/hero/slideshow.tsx';
 import { FadeIn } from '@/components/motion/FadeIn.tsx';
 import { about, projects, experience, stack, contacts } from '@/lib/data';
 
+// keeping this in case I ever want something on the nav bar
 const navItems = [
-	{ id: 'about', label: 'About' },
-  { id: 'experience', label: 'Experience' },
-	{ id: 'projects', label: 'Projects' },
-	{ id: 'stack', label: 'Stack' },
-	{ id: 'contact', label: 'Contact' },
 ];
 const stackIconUrl = `https://skillicons.dev/icons?i=${stack.icons.join(',')}&perline=10`;
 ---
@@ -19,7 +15,6 @@ const stackIconUrl = `https://skillicons.dev/icons?i=${stack.icons.join(',')}&pe
 		<div class='container flex items-center justify-between py-4 text-sm'>
 				<a href='#hero' class='flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground'>
 					<img src='/logo.svg' alt='Nikita Lobanov logo' class='h-6 w-6' loading='lazy' />
-					<span class='font-mono text-xs tracking-[0.3em]'>NIKITA</span>
 				</a>
 			<nav class='hidden items-center gap-6 text-muted-foreground md:flex'>
 				{navItems.map(item => (

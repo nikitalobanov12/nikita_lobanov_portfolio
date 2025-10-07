@@ -1,7 +1,7 @@
 export const about = {
   summary:
-    "I'm a 20 year old CS undergrad student from Vancouver, BC. I love to build things and solve problems for myself, sometimes it helps others too.\n\nMy main experience has been building full-stack applications, more specifically SaaS products and Internal Tools, I mainly like to work with Golang or the TypeScript ecosystem & my favorite database to use is postgres.\n\nI built my first PC when I was 10 years old which has helped me explore my curiousity with computers and get familiar with them, I'm comfortable with Linux and I live in the command line.\n\nCurrently I'm working on deepening my understanding on operating systems & relating that to distributed systems",
-  tools: ["Arch Linux", "Hyprland", "Neovim", "tmux", "Alacritty"],
+    "I’m a 20 year old CS undergrad in Vancouver, BC. I like discovering new things and I'm always looking for interesting things to do. I primarily work with Go, TypeScript, and Postgres. I built my first PC at 10 & I've been tinkering with technology ever since. ",
+  tools: ["Arch Linux", "Wayland", "Neovim", "tmux", "Ghostty"],
   currently: [
     "Learning about optimizing vector embeddings",
     "Reading the book Operating Systems: Three Easy Pieces",
