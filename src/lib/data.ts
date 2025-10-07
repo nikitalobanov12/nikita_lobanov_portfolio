@@ -1,9 +1,9 @@
 export const about = {
   summary:
     "I'm a 20 year old CS undergrad student from Vancouver, BC. I love to build things and solve problems for myself, sometimes it helps others too.\n\nMy main experience has been building full-stack applications, more specifically SaaS products and Internal Tools, I mainly like to work with Golang or the TypeScript ecosystem & my favorite database to use is postgres.\n\nI built my first PC when I was 10 years old which has helped me explore my curiousity with computers and get familiar with them, I'm comfortable with Linux and I live in the command line.\n\nCurrently I'm working on deepening my understanding on operating systems & relating that to distributed systems",
-  tools: ["Arch(btw) Linux", "Hyprland", "Neovim", "tmux", "Ghostty"],
+  tools: ["Arch Linux", "Hyprland", "Neovim", "tmux", "Alacritty"],
   currently: [
-    "Building tba",
+    "Learning about optimizing vector embeddings",
     "Reading the book Operating Systems: Three Easy Pieces",
     "Editing my dotfiles",
   ],
@@ -14,7 +14,7 @@ export const projects = [
     title: "WriteShare",
     descriptionPlain: "Google Docs-style markdown editor with real-time sync.",
     whyBuilt:
-      "Built to explore CRDTs and WebSocket performance with Go microservices.",
+      "I wanted to explore real time features as well as build something with Golang, I started by building out a markdown parser in Go & turned that into a full-stack app",
     reflection:
       "Learned where collaborative editing actually bottlenecks and how to budget latency.",
     techStack: [
@@ -67,17 +67,6 @@ export const projects = [
     ],
     github: "https://github.com/nikitalobanov12/circle",
   },
-  {
-    title: "Markdown Parser API",
-    descriptionPlain:
-      "Tiny Go service that converts markdown to HTML and streams changes.",
-    whyBuilt:
-      "Built to sharpen low-level Go skills and squeeze performance out of goroutines.",
-    reflection:
-      "Dialed in concurrency patterns and metrics for lightweight services.",
-    techStack: ["Go", "WebSockets", "Markdown-it", "Docker"],
-    github: "https://github.com/nikitalobanov12/markdown-parser",
-  },
 ];
 
 export const experience = [
@@ -128,34 +117,25 @@ export const stack = {
   categories: [
     {
       label: "Languages & Frameworks",
-      items: [
-        "Go",
-        "TypeScript",
-        "C++",
-        "Python",
-        "Next.js",
-        "HTMX",
-        "Node.js",
-        "Tailwind CSS",
-      ],
+      items: ["Go", "TypeScript", "Python", "Next.js", "Tailwind CSS", "C++"],
     },
     {
       label: "Data & Infrastructure",
-      items: ["PostgreSQL", "Redis", "Docker", "Terraform", "AWS"],
+      items: ["PostgreSQL", "Redis", "Docker", "Vercel", "Terraform", "AWS"],
     },
     {
       label: "Workflow & Tooling",
-      items: ["Arch Linux", "Linux", "Neovim", "Bash", "GitHub"],
+      items: ["Arch Linux", "Neovim", "zsh (bash)", "GitHub CI/CD"],
     },
     {
       label: "Testing",
-      items: ["Vitest"],
+      items: ["Vitest, Jest, Playwright, Go testing"],
     },
   ],
   exploring: [
     "Operating Systems",
     "Hugging Face AI tasks",
-    "Distributed Systems",
+    "vector embeddings",
   ],
 };
 

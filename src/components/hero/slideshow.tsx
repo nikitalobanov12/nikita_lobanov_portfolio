@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 const IMAGES = [
   { src: "/main.jpg", alt: "Nikita Lobanov Headshot" },
   { src: "/nikita.jpg", alt: "Nikita Lobanov portrait" },
-  { src: "/nikita-2.jpg", alt: "Nikita Lobanov candid" },
   { src: "/nikita-3.jpg", alt: "Nikita Lobanov working" },
 ];
 
