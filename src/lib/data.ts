@@ -1,10 +1,10 @@
 export const about = {
   summary:
-    "I’m a 20 year old CS undergrad in Vancouver, BC. I like discovering new things and I'm always looking for interesting things to do. I primarily work with Go, TypeScript, and Postgres. I built my first PC at 10 & I've been tinkering with technology ever since. ",
+    "I’m a 20 year old CS undergrad from Vancouver, BC. I built my first PC at 10 & I've been tinkering with technology ever since, I like discovering new things, & I'm always looking for interesting things to do.\n\nI primarily work with Go, TypeScript, Python, and Postgres, I daily drive Linux which has helped me get comfortable in the terminal & understand cloud deployment ",
   tools: ["Arch Linux", "Wayland", "Neovim", "tmux", "Ghostty"],
   currently: [
     "Learning about optimizing vector embeddings",
-    "Reading the book Operating Systems: Three Easy Pieces",
+    "Reading Operating Systems: Three Easy Pieces",
     "Editing my dotfiles",
   ],
 };
@@ -112,7 +112,6 @@ export const stack = {
     "nodejs",
     "tailwind",
     "vitest",
-    "htmx",
   ],
   categories: [
     {

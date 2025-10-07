@@ -10,7 +10,7 @@ export default {
 				xl: '3rem',
 			},
 			screens: {
-				'2xl': '1280px',
+				'2xl': '1400px',
 			},
 		},
 		extend: {
