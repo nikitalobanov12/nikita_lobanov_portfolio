@@ -42,15 +42,15 @@ const stackIconUrl = `https://skillicons.dev/icons?i=${stack.icons.join(',')}&pe
 	</header>
 	<main class='flex-1'>
 		<section id='hero' class='border-b border-border/60 bg-card/40'>
-			<div class='container flex flex-col gap-12 py-16 md:flex-row md:items-center md:justify-between md:py-24'>
-				<div class='space-y-6'>
-          <h1 class='text-balance text-4xl font-mono leading-tight md:text-5xl lg:text-6xl'>Nikita Lobanov</h1>
-          <p class='text-xs uppercase tracking-[0.24em] text-muted-foreground/80'>Full-Stack Developer</p>
-					<div class='flex flex-wrap gap-3 text-sm text-muted-foreground'>
+			<div class='container flex flex-col items-center gap-12 py-16 text-center md:flex-row md:items-center md:justify-between md:py-24 md:text-left'>
+				<div class='space-y-6 md:max-w-xl'>
+					<h1 class='text-balance text-4xl font-mono leading-tight md:text-5xl lg:text-6xl'>Nikita Lobanov</h1>
+					<p class='text-xs uppercase tracking-[0.24em] text-muted-foreground/80'>Full-Stack Developer</p>
+					<div class='flex flex-wrap justify-center gap-3 text-sm text-muted-foreground md:justify-start'>
 						<a href='#projects' class='rounded-md bg-primary px-4 py-2 font-medium text-primary-foreground transition-colors hover:bg-primary/90'>View projects</a>
 					</div>
 				</div>
-				<HeroSlideshow client:load class='mt-4 md:mt-0' />
+				<HeroSlideshow client:load class='mt-6 md:mt-0' />
 			</div>
 		</section>
 
@@ -86,7 +86,7 @@ const stackIconUrl = `https://skillicons.dev/icons?i=${stack.icons.join(',')}&pe
 				<div class='space-y-4'>
 					<h2 class='text-3xl font-mono tracking-tight md:text-4xl'>Experience</h2>
 				</div>
-				<div class='space-y-5'>
+				<div class='space-y-8 md:space-y-10'>
 					{experience.map((role, index) => (
 						<FadeIn key={role.company} client:visible delay={index * 0.1} className='rounded-lg border border-border/50 bg-background/60 p-6'>
 							<div class='flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between'>
