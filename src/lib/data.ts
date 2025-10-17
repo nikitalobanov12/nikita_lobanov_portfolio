@@ -69,29 +69,6 @@ export const projects = [
   },
 ];
 
-export const experience = [
-  {
-    company: "Seaspan",
-    role: "Software Development Intern",
-    period: "May–Aug 2024",
-    highlights: [
-      "Automated ingestion of 1,400+ finance files/month with Spring Boot APIs + Oracle ERP.",
-      "Built React dashboards for vessel data monitoring that surfaced KPIs instantly.",
-      "Tuned SQL queries and connection pools, reducing downtime by about 35%.",
-    ],
-  },
-  {
-    company: "Affistash",
-    role: "Full Stack Developer",
-    period: "2023–2024",
-    highlights: [
-      "Shipped Next.js dashboards surfacing AI-sourced analytics so brands could work in one place.",
-      "Integrated Firebase + OpenAI for brand matching with caching to keep latency predictable.",
-      "Built D3 visualisations across 100k+ data points for quick scans and exports.",
-    ],
-  },
-];
-
 export const stack = {
   icons: [
     "go",
